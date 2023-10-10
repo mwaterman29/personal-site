@@ -26,16 +26,22 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className='bg-black'>
-          <p className='p-4 w-full text-center items-center text-4xl'>Matt Waterman</p>
+      <body className={inter.className + " min-h-screen bg-black"}>
+        <div className='z-20 top-0 sticky bg-black'>
+          <p className='p-4 w-full text-center items-center text-4xl text-white'>Matt Waterman</p>
           <hr className=''/>
-          <div className='flex flex-row justify-evenly w-full gap-4 p-4'>
+          <div className='flex flex-row justify-evenly w-full gap-4'>
             {Object.entries(headerLinks).map(([key, value]) => (
               <Link key={key} href={value} className='group transition-all flex flex-row w-full h-full'>
-                  <p className='w-full h-full text-xl text-center'>{key}</p>
-                  <span className="block min-w-0 group-hover:min-w-full transition-all duration-400 h-0.5 bg-white"></span>
-              </Link>
+                <div className='flex flex-row items-center m-2 w-full h-full'>
+                  <div className='flex w-full h-full justify-center'>
+                    <div className='transition-all'>
+                      <p className='text-2xl text-center text-white'>{key}</p> 
+                      <span className="block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-white"></span>
+                    </div>
+                  </div>
+                </div>
+            </Link>
             ))}
           </div> 
         </div>
