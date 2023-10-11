@@ -1,12 +1,38 @@
 # Test Project Entry 1
 
-test project summary
+test project summary that has a lot of text lot of text lot of textthat has a lot of text lot of text lot of textthat has a lot of text lot of text lot of textthat has a lot of text lot of text lot of textthat has a lot of text lot of text lot of textthat has a lot of text lot of text lot of textthat has a lot of text lot of text lot of textthat has a lot of text lot of text lot of textthat has a lot of text lot of text lot of textthat has a lot of text lot of text lot of textthat has a lot of text lot of text lot of textthat has a lot of text lot of text lot of text
+
+then
+
+
+
+`surprise code snippet~` -- epic!!
+
+
+
+
+
+more
+
+
+
+lines
+
+
+
+after
+
+
+
+that
+
+
 
 ![image](https://i.imgur.com/ShiY8da.png)
 
 text
 
-```c#
+```
 code goes here;
 
 public static void main()
