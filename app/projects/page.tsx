@@ -12,9 +12,9 @@ export default function Projects() {
     return (
     <main className="flex flex-col min-h-full">
         <p className=''>intro goes here</p>
-        {files.map(data => {
+        {files.map((data, _index) => {
             return (
-                <p>{data}</p>
+                <p key={`entry-${_index}`}>{data}</p>
             )
         })}
     </main>
