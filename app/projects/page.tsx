@@ -13,7 +13,7 @@ export default function Projects() {
     return (
     <main className="flex flex-col min-h-full">
         <p className=''>Projects</p>
-        <div className='grid grids-cols-2'>
+        <div className='grid grid-cols-3'>
             {files.map((data, _index) => {
                 /*
                 For each project, extract 
@@ -29,15 +29,19 @@ export default function Projects() {
                 const summary = lines[4].trim();
 
                 return(
-                    <div key={projTitle}>
-                        <p>{projTitle}</p>
-                        <Image
-                            src={imageUrl}
-                            alt={projTitle + "Image"}
-                            width={400}
-                            height={400}
-                        />
-                        <p>{summary}</p>
+                    <div key={projTitle} className='flex w-full h-full items-center justify-center'>
+                        <div className='bg-neutral-700 rounded-md p-4 h-full'>                        
+                            <p className='text-2xl'>{projTitle}</p>
+                            <hr/>
+                            <Image
+                                className='m-2'
+                                src={imageUrl}
+                                alt={projTitle + "Image"}
+                                width={500}
+                                height={500}
+                            />
+                            <p>{summary}</p>
+                        </div>
                     </div>
                 )
             })}
