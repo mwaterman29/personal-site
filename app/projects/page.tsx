@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { readdirSync, readFileSync } from 'fs';
 import path from 'path';
 import markdownToComponent from '@/util/ConvertMarkdown';
+import Link from 'next/link';
 
 export default function Projects() {
 
@@ -13,7 +14,8 @@ export default function Projects() {
     return (
     <main className="flex flex-col min-h-full">
         <p className=''>Projects</p>
-        <div className='grid grid-cols-3'>
+        
+        <div className='grid grid-cols-3 gap-8 p-4'>
             {files.map((data, _index) => {
                 /*
                 For each project, extract 
@@ -29,7 +31,9 @@ export default function Projects() {
                 const summary = lines[4].trim();
 
                 return(
-                    <div key={projTitle} className='flex w-full h-full items-center justify-center'>
+                    <Link 
+                        href={`/projects/${fileNames[_index]}`}
+                        key={projTitle} className='flex w-full h-full items-center justify-center'>
                         <div className='bg-neutral-700 rounded-md p-4 h-full'>                        
                             <p className='text-2xl'>{projTitle}</p>
                             <hr/>
@@ -42,7 +46,7 @@ export default function Projects() {
                             />
                             <p>{summary}</p>
                         </div>
-                    </div>
+                    </Link>
                 )
             })}
         </div>
