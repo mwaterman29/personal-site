@@ -10,8 +10,8 @@ function markdownToComponent(markdown: string) {
         { pattern: /^###### (.+)$/gm, replacement: '<h6 class="text-sm text-gray-500">$1</h6>' },
 
         //Bold & Italic
-        { pattern: /\*\*(.+?)\*\*/g, replacement: '<span class="font-bold">$1</span>' },
-        { pattern: /\*(.+?)\*/g, replacement: '<span class="italic">$1</span>' },
+        { pattern: /\*\*(.+?)\*\*/g, replacement: '<b>$1</b>' },
+        { pattern: /\*(.+?)\*/g, replacement: '<i>$1</i>' },
 
         //Images and Links
         { pattern: /\!\[([^\]]+)\]\(([^)]+)\)/g, replacement: '<Image src="$2" alt="$1" />' },
@@ -22,8 +22,8 @@ function markdownToComponent(markdown: string) {
         { pattern: /```([^`]+)```/g, replacement: '<div class="bg-slate-700 rounded-md text-sm p-4 my-2">$1</div>' }, // multiline code snippet
 
         //Line Breaks -- lazy simple rule for spacing
-        { pattern: /\n\s\n\s/g, replacement: '<div class="h-4"></div>' }, // big spacing for double
-        { pattern: /\n\s/g, replacement: '<div class="h-1"></div>' }, // small spacing for single linebreaks
+        { pattern: /\n\s\n\s/g, replacement: '</p><div class="h-4"></div><p>' }, // big spacing for double
+        { pattern: /\n\s/g, replacement: '</p><div class="h-1"></div><p>' }, // small spacing for single linebreaks
     ];
 
     // Apply markdown
@@ -33,7 +33,7 @@ function markdownToComponent(markdown: string) {
     });
 
     //XSS? Never heard of it.
-    const comp = <div className='p-4'
+    const comp = <div className='flex flex-col'
     dangerouslySetInnerHTML={{__html: result}} 
     />
 
