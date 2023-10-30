@@ -40,7 +40,7 @@ export default function Projects() {
                             <Image
                                 className='m-2'
                                 src={imageUrl}
-                                alt={projTitle + "Image"}
+                                alt={projTitle + " Image"}
                                 width={500}
                                 height={500}
                             />

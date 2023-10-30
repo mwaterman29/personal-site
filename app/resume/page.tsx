@@ -15,11 +15,14 @@ export default function Home() {
             <div className='opacity-0 animate-fadeIn1'>
                 <p className='w-full text-2xl text-center'>Education</p>
                 <div className='flex flex-row justify-between'>
+                    <p>Bachelor of Science in Computer Science, Minor in Mathematics</p>
+                </div>
+                <div className='flex flex-row justify-between'>
                     <p>University of Massachusetts Lowell</p>
                     <p>Lowell, MA</p>
                 </div>
                 <div className='flex flex-row justify-between'>
-                    <p>Cumulative GPA: 4.0</p>
+                    <p>Cumulative GPA: 4.0/4.0</p>
                     <p>September 2020 - May 2023</p>
                 </div>
             </div>
