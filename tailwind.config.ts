@@ -5,9 +5,7 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  safelist: [
-    'h-1', 'h-4',
+    './util/ConvertMarkdown.tsx', // auto-include whatever gets filled in from markdown conversions
   ],
   theme: {
     extend: {

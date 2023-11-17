@@ -5,14 +5,15 @@ import markdownToComponent from '@/util/ConvertMarkdown';
 import Link from 'next/link';
 
 
-export default function PostPage({ params }: { params: { post_name: string } }) 
+export default async function PostPage({ params }: { params: { post_name: string } }) 
 {
     const directoryPath = path.join(process.cwd(), 'content', 'posts');
     const data = readFileSync(path.join(directoryPath, decodeURI(params.post_name)), "utf8");
+    const content = await markdownToComponent(data);
 
     return (
         <div className='p-16 gap-2'>
-            {markdownToComponent(data)}
+            {content}
         </div>
     )
 }
