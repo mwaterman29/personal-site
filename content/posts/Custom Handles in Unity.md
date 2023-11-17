@@ -69,7 +69,7 @@ If you were to paste this, you'd see that matrix and zTest are [both getters to 
         }
 ```
 
-It seems like you can get away with substitutions, so let's step through actual functional code:
+It seems like you can get away with referencing these via Handles.__, so let's step through actual functional code:
 
 
 

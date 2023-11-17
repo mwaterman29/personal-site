@@ -32,3 +32,5 @@ Importantly, the backend also connects straight to Unity. Assets are not simply 
 
 As the lead of a team of three developers, one of which was a co-op and could only work with us for six months, and the other was busy being the CEO of the company, most of the work was in my hands for this project. I had to learn a *lot* to make this project work. I had limited experience in cloud deployment, CI/CD, and managing a full-stack web app, so there was a lot of learning-as-we-go. Some early good choices led to avoiding technical debt, though, and development was about as smooth as could be expected given the circumstances.
 
+![](https://marketplace.vrtexstudios.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhomebanner-cropped.2e58bf8e.png&w=3840&q=75)
+
