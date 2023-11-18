@@ -20,8 +20,8 @@ export default function RootLayout({
     'Home': '/',
     'Resume' : '/resume',
     'Projects' : '/projects',
-    'CV' : '/cv',
     '\'Blog\'' : '/posts',
+    'Contact' : '/contact',
   }
 
   return (
