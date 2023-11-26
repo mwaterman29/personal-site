@@ -1,8 +1,8 @@
 # Spicetify Weighted Playlists
 
-![]()
+![Image](https://i.gyazo.com/b362b2e438e2c7fdf213a62e63226cc5.png)
 
-An extension for the Spotify player that allows weighting of songs on playlists
+An extension for the Spotify player that allows weighting of songs on playlists.
 
 
 
