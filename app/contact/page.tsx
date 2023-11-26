@@ -20,24 +20,24 @@ const Contact: FC = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className='mb-5'>
+      <div className='flex flex-col gap-2 p-4'>
+        <p className='text-4xl mt-4'>Contact</p>
+        <p>If you want to contact me (professional inquiries, engineering questions, job offers 😉), you&#39;re welcome to add me on Discord (m_w_), or submit the form below, and I&#39;ll get back to you by email.</p>
         <label
           htmlFor='name'
-          className='mb-3 block text-base font-medium text-black'
+          className=''
         >
-          Full Name
+        Name
         </label>
         <input
           type='text'
-          placeholder='Full Name'
+          placeholder='Name'
           className='w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
           {...register('name', { required: true })}
         />
-      </div>
-      <div className='mb-5'>
         <label
           htmlFor='email'
-          className='mb-3 block text-base font-medium text-black'
+          className=''
         >
           Email Address
         </label>
@@ -47,11 +47,9 @@ const Contact: FC = () => {
           className='w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
           {...register('email', { required: true })}
         />
-      </div>
-      <div className='mb-5'>
-        <label
+                <label
           htmlFor='message'
-          className='mb-3 block text-base font-medium text-black'
+          className=''
         >
           Message
         </label>
@@ -61,8 +59,6 @@ const Contact: FC = () => {
           className='w-full resize-none rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
           {...register('message', { required: true })}
         ></textarea>
-      </div>
-      <div>
         <button className='hover:shadow-form rounded-md bg-purple-500 py-3 px-8 text-base font-semibold text-white outline-none'>
           Submit
         </button>

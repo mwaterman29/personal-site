@@ -10,8 +10,8 @@ swag mode (workshop the name :3) will be a card display with a blurb about work 
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-full min-w-full items-center p-12">
-        <div className='flex w-1/2 flex-col'>
+    <main className="flex flex-col min-h-full min-w-full items-center py-12">
+        <div className='flex w-full md:w-3/4 xl:w-1/2 flex-col'>
             <div className='opacity-0 animate-fadeIn1'>
                 <p className='w-full text-2xl text-center'>Education</p>
                 <div className='flex flex-row justify-between'>

@@ -2,12 +2,12 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex flex-row min-h-full p-24">
+    <main className="flex flex-col lg:flex-row min-h-full p-2 md:p-6 lg:p-12 xl:p-18 2xl:p-24">
       <div className='flex basis-1/4'>
         <p>image goes here :)</p>
       </div>
       <div className='flex flex-col basis-3/4'>      
-        <p className='text-4xl'>Hi, I&#39;m Matt!</p>
+        <p className='text-center lg:text-left text-4xl'>Hi, I&#39;m Matt!</p>
         <p className='text-xl my-4'>I&#39;m a developer with a particular affinity for VR tech, Unity editor scripting, computer science education, and Next.js fullstack webdev.</p>
         <p>You can read about my projects in all the areas above on the projects section of this site! Regarding my focus areas, I built some interesting stuff. I built
           avatar creation software in Unity, as well as an online marketplace to buy and sell VR assets. I built a Unity VR app for the Quest to teach students about

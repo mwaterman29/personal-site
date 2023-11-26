@@ -13,9 +13,7 @@ export default function Projects() {
 
     return (
     <main className="flex flex-col min-h-full">
-        <p className=''>Projects</p>
-        
-        <div className='grid grid-cols-3 gap-8 p-4'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 p-4'>
             {files.map((data, _index) => {
                 /*
                 For each project, extract 
