@@ -65,11 +65,11 @@ export default function Home() {
             <div className='min-h-[40px]'></div>
 
             <div className='opacity-0 animate-fadeIn3'>
-                <p className='w-full text-2xl text-center'>Programming Languages</p>
-                <p>C# - Full Professional Capability with .NET and C# up to the latest standards, including Unity.</p>
-                <p>Typescript - Full Professional Capability, particular experience with Next.js, React, and React Native</p>
-                <p>C++ - Professional Capability, including knowledge of STL and Boost Libraries.</p>
-                <p>Lua - Professional Capability, primarily in the context of scripting for Roblox games.</p>
+                <p className='w-full text-2xl text-center'>Programming Languages and Tools</p>
+                <p>Languages: C#, Typescript, C++, Lua, Java</p>
+                <p>Frameworks: Next.js, React, React Native, .NET, .NET Core, </p>
+                <p>Software: Unity3D, PostgreSQL and MySQL, GitHub, Android Studio, Roblox Studio</p>
+                <p>Tools and Add-ons: TailwindCSS, Prisma, Unity XR Core, Unity Oculus Integration, Spicetify, Rojo</p>
             </div>
 
             <div className='min-h-[40px]'></div>

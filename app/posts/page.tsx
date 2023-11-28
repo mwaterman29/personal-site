@@ -13,7 +13,10 @@ export default function Posts() {
 
     return (
     <main className="flex flex-col min-h-full">
-        <p className=''>Posts</p>
+        <p className='p-4 text-lg'>Through my work at VRtex, and personally, 
+        I have worked through a number of problems with little to no online documentation. 
+        For the sake of being able to reference these later, and to share with others, they&#39;re documented here.
+        If you have any questions, or need help implementing the content here, please do so via <a className='text-blue-300 underline' href='/contact'>the contact page</a>.</p>
         
         <div className='grid grid-cols-3 gap-8 p-4'>
             {files.map((data, _index) => {
