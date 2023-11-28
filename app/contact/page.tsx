@@ -20,7 +20,7 @@ const Contact: FC = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className='flex flex-col gap-2 p-4'>
+      <div className='flex flex-col gap-2 p-4 md:p-6 lg:p-8 xl:p-12 2xl:p-16'>
         <p className='text-4xl mt-4'>Contact</p>
         <p>If you want to contact me (professional inquiries, engineering questions, job offers 😉), you&#39;re welcome to add me on Discord (m_w_), or submit the form below, and I&#39;ll get back to you by email.</p>
         <label
