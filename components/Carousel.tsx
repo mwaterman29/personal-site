@@ -28,6 +28,13 @@ export default function Carousel({ urls }: Props) {
             setIndex(index - 1);
     }
 
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            next();
+        }, 3500);
+        return () => clearInterval(intervalId);
+    });
+
     //L/R arrow listeners
     useEffect(() => {
 
