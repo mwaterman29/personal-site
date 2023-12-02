@@ -8,6 +8,7 @@ export default function Posts() {
 
     const directoryPath = path.join(process.cwd(), 'content', 'posts');
     const fileNames = readdirSync(directoryPath);
+    fileNames.sort();
 
     const files = fileNames.map(fname => readFileSync(path.join(directoryPath, fname), 'utf8'));
 

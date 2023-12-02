@@ -8,6 +8,7 @@ export default function Projects() {
 
     const directoryPath = path.join(process.cwd(), 'content', 'projects');
     const fileNames = readdirSync(directoryPath);
+    fileNames.sort();
 
     const files = fileNames.map(fname => readFileSync(path.join(directoryPath, fname), 'utf8'));
 
