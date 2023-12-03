@@ -14,7 +14,7 @@ As a result, I built an app that intends to teach computer science students abou
 
 
 
-For my project, I built a version of the app that was more of a linear, on-rails experience than a sandbox, and used it to evaluate whether VR had benefits for education. You can read the [full report here](https://www.mwaterman.dev/dist/Honors%20Report%20Final.pdf), but as it's a formal report, it's very, ***very*** long (203pg), as it contains both the full submission for my university's ethics and review board, and the **entire** source code, converted to PDF via enscript and ps2pdf, then concatenated via pdftk. I'll summarize the methodology and findings here, and leave the abstract in full as a tl;dr. Alternatively, you can read through the presentation I [presented, here.])(https://www.mwaterman.dev/dist/Honors%20Project%20Final%20Report.pptx)
+For my project, I built a version of the app that was more of a linear, on-rails experience than a sandbox, and used it to evaluate whether VR had benefits for education. You can read the [full report here](https://www.mwaterman.dev/dist/Honors%20Report%20Final.pdf), but as it's a formal report, it's very, ***very*** long (203pg), as it contains both the full submission for my university's ethics and review board, and the **entire** source code, converted to PDF via enscript and ps2pdf, then concatenated via pdftk. I'll summarize the methodology and findings here, and leave the abstract in full as a tl;dr. Alternatively, you can read through the presentation I [presented, here.](https://www.mwaterman.dev/dist/Honors%20Project%20Final%20Report.pptx)
 
 
 
