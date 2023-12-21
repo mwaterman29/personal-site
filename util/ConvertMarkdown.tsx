@@ -40,7 +40,6 @@ async function markdownToComponent(markdown: string) {
     });
 
     const rules = [
-
         //General rules for handling conversion md -> tailwind
         //Headers/Links
         { pattern: /<h1>/g, replacement: '<h1 class=\'text-4xl text-white\'>' },
@@ -64,24 +63,24 @@ async function markdownToComponent(markdown: string) {
         //Code blocks
         { pattern: /<pre>/g, replacement: '<pre class=\'bg-slate-900 p-2 mt-2 rounded-md\'>' },  // Code block formatting - I don't use <pre> anywhere else
 
-        { pattern: /hljs language-tsx/g, replacement: 'text-white-200' },  // Default text color
-        { pattern: /hljs-title function_/g, replacement: 'text-yellow-200' },  // Function Title
-        { pattern: /hljs-function/g, replacement: 'text-yellow-200' },  // Function
-        { pattern: /hljs-class/g, replacement: 'text-emerald-500' },  // Function
-        { pattern: /hljs-method/g, replacement: 'text-yellow-200' },  // Function
+        { pattern: /"hljs language-tsx"/g, replacement: 'text-white-200' },  // Default text color
+        { pattern: /"hljs-title function_"/g, replacement: 'text-yellow-200' },  // Function Title
+        { pattern: /"hljs-function"/g, replacement: 'text-yellow-200' },  // Function
+        { pattern: /"hljs-class"/g, replacement: 'text-emerald-500' },  // Function
+        { pattern: /"hljs-method"/g, replacement: 'text-yellow-200' },  // Function
 
-        { pattern: /hljs-enum/g, replacement: 'text-green-300' },  // Enum
-        { pattern: /hljs-comment/g, replacement: 'text-green-700' },  // Comment
-        { pattern: /hljs-number/g, replacement: 'text-blue-500' },   // Number
-        { pattern: /hljs-keyword/g, replacement: 'text-fuchsia-400' }, // Keyword
-        { pattern: /hljs-string/g, replacement: 'text-orange-400' },  // String
-        { pattern: /hljs-built_in/g, replacement: 'text-sky-500' },  // Built-in type (int, string, etc)
-        { pattern: /hljs-params/g, replacement: 'text-cyan-200' },  // Function/method params
-        { pattern: /hljs-title class_/g, replacement: 'text-blue-600' },  // Built-in class - Object / Number / Math...
-        { pattern: /hljs-property/g, replacement: 'text-teal-500' },  // Property
-        { pattern: /hljs-literal/g, replacement: 'text-blue-500' },  // Literal
-        { pattern: /hljs-subst/g, replacement: 'text-blue-500' },  // String Interpolation
-        { pattern: /hljs-variable language_/g, replacement: 'text-blue-500' },  // Vars
+        { pattern: /"hljs-enum"/g, replacement: 'text-green-300' },  // Enum
+        { pattern: /"hljs-comment"/g, replacement: 'text-green-700' },  // Comment
+        { pattern: /"hljs-number"/g, replacement: 'text-blue-500' },   // Number
+        { pattern: /"hljs-keyword"/g, replacement: 'text-fuchsia-400' }, // Keyword
+        { pattern: /"hljs-string"/g, replacement: 'text-orange-400' },  // String
+        { pattern: /"hljs-built_in"/g, replacement: 'text-sky-500' },  // Built-in type (int, string, etc)
+        { pattern: /"hljs-params"/g, replacement: 'text-cyan-200' },  // Function/method params
+        { pattern: /"hljs-title class_"/g, replacement: 'text-blue-600' },  // Built-in class - Object / Number / Math...
+        { pattern: /"hljs-property"/g, replacement: 'text-teal-500' },  // Property
+        { pattern: /"hljs-literal"/g, replacement: 'text-blue-500' },  // Literal
+        { pattern: /"hljs-subst"/g, replacement: 'text-blue-500' },  // String Interpolation
+        { pattern: /"hljs-variable language_"/g, replacement: 'text-blue-500' },  // Vars
     ];
     
     // Apply markdown
