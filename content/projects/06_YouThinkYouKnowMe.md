@@ -104,4 +104,4 @@ The tutorial overlay is simple, and is really just a half-opacity black div that
 
 z-10 is so that it appears on top of most of the elements, but leaves the tutorial elements at z-20 and above, so they appear not 'dimmed'.
 
-[pointer-events-none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) stops the overlay from blocking blocking buttons.
+[pointer-events-none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) stops the overlay from blocking buttons.
