@@ -8,7 +8,7 @@ A game for JPEGMAFIA fans - guess the song from his producer tag - "You think yo
 
 This project's just for fun, as a result of a conversation I had with a close friend of mine who is also a JPEGMAFIA superfan. We've seen him live a number of times and often enjoy discussing his music. After making a top-32 march madness style bracket, we noticed that his producer tag "You think you know me" is very distinct. Partially based on having played games like [Bandle](https://bandle.app/) and Name That Tune, I had the idea that you could probably guess the song just from the isolated snippet.
 
-Consequently, I built a simple SPA to implement the game. I personally think that create-react-app is really bulky, and I didn't want to have to deal with figuring out a hosting solution, considering that I do more than enough of that [at work already](). For both of those reasons, I chose Next.js, hosted on Vercel. I highly doubt I'll exceed the hobby tier, so it should be free, seamless hosting, with automatic CD for as long as Vercel will let me.
+Consequently, I built a simple SPA to implement the game. I personally think that create-react-app is really bulky, and I didn't want to have to deal with figuring out a hosting solution, considering that I do more than enough of that [at work already](https://www.mwaterman.dev/projects/01_VRtex%20Marketplace.md). For both of those reasons, I chose Next.js, hosted on Vercel. I highly doubt I'll exceed the hobby tier, so it should be free, seamless hosting, with automatic CD for as long as Vercel will let me.
 
 Technically, there's not much here that should be a surprise for even intermediate developers, but I'll highlight a few things that were interesting to me.
 
