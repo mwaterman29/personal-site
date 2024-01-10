@@ -1,6 +1,6 @@
 # Custom Handles in Unity
 
-![]()
+![img](https://i.gyazo.com/4a6c50bfd3283421027ffd783b70fdbe.png)
 
 The Handles class in Unity offers extremely powerful tools for extending editor interactions. Despite this, the documentation is underwhelming at best, particularly for the CapFunction delegate that allows for custom mesh handles to be drawn.
 

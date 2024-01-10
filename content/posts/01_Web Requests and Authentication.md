@@ -1,8 +1,6 @@
 # Editor Scripting for Async web requests and Authentication
 
-![]()
-
-Description here 
+![](https://i.gyazo.com/8ae328211f17d1ab5a69512f6c1fccc9.png)
 
 When trying to write code that interacts with web APIs from the Editor, you need async support. Since the Editor Coroutines package doesn't work with Unity Web Requests, you need a workaround to have consistent, expected behavior.
 
