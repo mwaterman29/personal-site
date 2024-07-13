@@ -27,6 +27,8 @@ model Album {
   imageLink  String
   artistId   Int
   artist     Artist @relation(fields: [artistId], references: [id])
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt 
 
   songs Song[]
 }
@@ -38,7 +40,10 @@ model Song {
   link      String? // Optional link
   imageLink String? // Optional image link
   albumId   Int? // Optional album
+  reviewFile String? // review file name
   album     Album?  @relation(fields: [albumId], references: [id])
   artistId  Int
   artist    Artist  @relation(fields: [artistId], references: [id])
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt 
 }

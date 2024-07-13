@@ -1,64 +1,70 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { prisma } from '@/prisma/client';
+import { NextApiRequest, NextApiResponse } from "next";
+import { PrismaClient } from "@prisma/client";
+import { NextRequest, NextResponse } from "next/server";
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method === 'POST') {
-    const { artistName, isAlbum, title, rating, trackRatings, link, artistImageLink, albumImageLink, songImageLink } = req.body;
+const prisma = new PrismaClient();
 
-    try {
-      // Find or create the artist
-      let artist = await prisma.artist.findFirst({
-        where: {
-            name: artistName,
-        }
-      })
-      if (!artist) {
-        artist = await prisma.artist.create({ data: { name: artistName, link: link || undefined, imageLink: artistImageLink || undefined } });
-      }
+export async function POST(request: NextRequest) {
+	const { artistName, isAlbum, title, rating, trackRatings, link, artistImageLink, imageLink, reviewFile } = await request.json();
 
-      if (isAlbum) {
-        // Create the album and its tracks
-        const album = await prisma.album.create({
-          data: {
-            title,
-            rating,
-            link,
-            reviewFile: '',
-            imageLink: albumImageLink,
-            artist: { connect: { id: artist.id } },
-          },
-        });
+	try {
+		// Find or create the artist
+		let artist = await prisma.artist.findUnique({ where: { name: artistName } });
+		if (!artist) 
+    {
+      console.log("Creating artist", artistName);
+			artist = await prisma.artist.create({ data: { name: artistName, link: link || undefined, imageLink: artistImageLink || undefined } });
+		}
 
-        await prisma.song.createMany({
-          data: trackRatings.map((track) => ({
-            title: track.name,
-            rating: track.rating,
-            albumId: album.id,
-            artistId: artist.id,
-            imageLink: songImageLink || undefined,
-          })),
-        });
-      } else {
-        // Create the individual song
-        await prisma.song.create({
-          data: {
-            title,
-            rating,
-            link,
-            artist: { connect: { id: artist.id } },
-            imageLink: songImageLink || undefined,
-          },
-        });
-      }
+		if (isAlbum) 
+    {
 
-      res.status(200).json({ message: 'Review submitted successfully' });
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ error: 'Internal server error' });
-    }
-  } else {
-    res.status(405).json({ error: 'Method not allowed' });
-  }
-};
+			// Create the album and its tracks
+      console.log("Creating album", title);
+			const album = await prisma.album.create({
+				data: {
+					title,
+					rating,
+					link,
+					reviewFile: reviewFile,
+					imageLink: imageLink,
+					artist: { connect: { id: artist.id } },
+				},
+			});
 
-export default handler;
+      trackRatings.forEach((track: any) => {
+        console.log("Creating track", track.name, track.rating);
+      });
+
+			await prisma.song.createMany({
+				data: trackRatings.map((track: any) => ({
+					title: track.name,
+					rating: track.rating,
+					albumId: album.id,
+					artistId: artist.id,
+					imageLink: imageLink || undefined,
+				})),
+			});
+		} 
+    else 
+    {
+			// Create the individual song
+      console.log("Creating song as a single review");
+			await prisma.song.create({
+				data: {
+					title,
+					rating,
+					link,
+					reviewFile: reviewFile,
+					artist: { connect: { id: artist.id } },
+					imageLink: imageLink || null,
+				},
+			});
+		}
+
+		return NextResponse.json({ message: "Review submitted successfully" });
+	} catch (error) {
+		console.error(error);
+		return NextResponse.json({ error: "Error submitting review" }, { status: 500 });
+	}
+}
