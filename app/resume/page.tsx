@@ -33,11 +33,21 @@ export default function Home() {
                 <p className='w-full text-2xl text-center'>Work Experience</p>
                 <div className='flex flex-row justify-between pt-2'>
                     <Link
+                        href="https://www.mavenbio.io/"
+                    >
+                        <p><span className='underline'>Maven Bio</span>, Senior Frontend Engineer</p>
+                    </Link>
+                    <p>Feb 2022 - Feb 2024</p>
+                </div>
+                <p className='text-sm'>Lead developer on the front-end for an AI BioPharma intelligence startup - brought us from empty repository to product market fit.</p>
+
+                <div className='flex flex-row justify-between pt-2'>
+                    <Link
                         href="https://www.vrtexstudios.com/"
                     >
                         <p><span className='underline'>VRtex Studios</span>, Chief Technical Officer</p>
                     </Link>
-                    <p>Feb 2022 - Present</p>
+                    <p>Feb 2022 - Feb 2024</p>
                 </div>
                 <p className='text-sm'>Main developer for Virtual Reality startup, creating avatar and asset creation tools for metaverse applications.</p>
 

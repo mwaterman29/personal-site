@@ -22,6 +22,7 @@ export default function RootLayout({
     'Projects' : '/projects',
     'Posts' : '/posts',
     'Contact' : '/contact',
+    'Music' : '/music',
   }
 
   return (
