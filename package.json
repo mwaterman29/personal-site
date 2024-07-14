@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.16.2",
+    "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-tabs": "^1.1.0",
     "@types/nodemailer": "^6.4.14",
     "class-variance-authority": "^0.7.0",

@@ -2,18 +2,31 @@
 
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import TopMusicPanel from "./TopMusicPanel";
+import { Album, Song } from "@prisma/client";
+import { AlbumWithArtist } from "@/app/music/types";
 
 interface MusicHomePageProps {
-    albumReviews: any[];
-    singleReviews: any[];
+    albumReviews: AlbumWithArtist[];
+    allSongs: Song[];
+    singleReviews: Song[];
     philosophyArticles: any[];   
 }
 
 const MusicHomePage = ({
-
+    albumReviews,
+    allSongs,
+    singleReviews,
+    philosophyArticles,
 }: MusicHomePageProps) => {
 
     const [tabSelected, setTabSelected] = useState('reviews');
+
+    const testAlbums = Array.from({length: 27}, (_, i) => ({
+        id: i,
+        title: `Album ${i}`,
+        rating: i * 5,
+    })) as any[];
 
     return (
         <div className="flex flex-col w-full h-full items-center justify-center">
@@ -51,7 +64,7 @@ const MusicHomePage = ({
                     </TabsTrigger>
                 </TabsList>
                 <TabsContent value="top">
-                    <p>top here</p>
+                    <TopMusicPanel albums={albumReviews} songs={allSongs} singles={singleReviews} />
                 </TabsContent>
                 <TabsContent value="reviews">
                     <p>reviews here</p>
