@@ -67,10 +67,10 @@ const MusicHomePage = ({
                     <TopMusicPanel albums={albumReviews} songs={allSongs} singles={singleReviews} />
                 </TabsContent>
                 <TabsContent value="reviews">
-                    <p>reviews here</p>
+                    <p>This page is under construction... more coming soon!</p>
                 </TabsContent>
                 <TabsContent value="philosophy">
-                    <p>philosophy here</p>
+                    <p>This page is under construction... more coming soon!</p>
                 </TabsContent>
             </Tabs>
         </div>
