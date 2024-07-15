@@ -7,11 +7,22 @@ import { prisma } from '@/prisma/client';
 import ArtistAvatar from '@/components/ArtistAvatar';
 import getRatingColor from '@/util/getRatingColor';
 
-
 export default async function PostPage({ params }: { params: { name: string } }) 
 {
     const directoryPath = path.join(process.cwd(), 'content', 'reviews');
-    const data = readFileSync(path.join(directoryPath, decodeURIComponent(params.name)), "utf8");
+    const filenames = readdirSync(directoryPath);
+  
+    // Find the matching filename in a case-insensitive manner to make sure git doesn't mess up the casing
+    const matchingFilename = filenames.find(
+      filename => filename.toLowerCase() === decodeURIComponent(params.name).toLowerCase()
+    );
+  
+    if (!matchingFilename)
+    {
+      throw new Error(`File not found: ${params.name}`);
+    }
+
+    const data = readFileSync(path.join(directoryPath, matchingFilename), 'utf8');
 
     //Find the review for this album/song
     const album = await prisma.album.findFirst({
