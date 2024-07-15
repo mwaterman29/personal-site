@@ -27,6 +27,7 @@ const TopMusicPanel = ({
                 {albums.sort((a,b) => b.rating - a.rating).map((album) => {
                     return (
                         <Link
+                        key={album.id}
                         href={`/music/${album.reviewFile}`} 
                         className="flex flex-col p-2 border rounded-md gap-y-2 items-center">
                             <div className="flex flex-col gap-y-2">

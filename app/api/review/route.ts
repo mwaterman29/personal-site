@@ -11,16 +11,16 @@ export async function POST(request: NextRequest) {
 		// Find or create the artist
 		let artist = await prisma.artist.findUnique({ where: { name: artistName } });
 		if (!artist) 
-    {
-      console.log("Creating artist", artistName);
+    	{
+			console.log("Creating artist", artistName);
 			artist = await prisma.artist.create({ data: { name: artistName, link: link || undefined, imageLink: artistImageLink || undefined } });
 		}
 
-		if (isAlbum) 
+	if (isAlbum) 
     {
 
-			// Create the album and its tracks
-      console.log("Creating album", title);
+		// Create the album and its tracks
+      	console.log("Creating album", title);
 			const album = await prisma.album.create({
 				data: {
 					title,
@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
 					title: track.name,
 					rating: track.rating,
 					albumId: album.id,
-					artistId: artist.id,
+					artistId: artist?.id,
 					imageLink: imageLink || undefined,
 				})),
 			});
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
 					rating,
 					link,
 					reviewFile: reviewFile,
-					artist: { connect: { id: artist.id } },
+					artist: { connect: { id: artist?.id } },
 					imageLink: imageLink || null,
 				},
 			});
