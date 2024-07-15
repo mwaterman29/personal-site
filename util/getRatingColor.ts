@@ -16,7 +16,7 @@ const getRatingColor = (rating: number) => {
       startColor = colors.red;
       endColor = colors.yellow;
       fraction = rating / 50;
-    } else if (rating <= 100) {
+    } else if (rating < 100) {
       // 50 - 100 goes from yellow to green
       startColor = colors.yellow;
       endColor = colors.green;

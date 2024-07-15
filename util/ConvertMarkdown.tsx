@@ -52,6 +52,9 @@ async function markdownToComponent(markdown: string) {
         { pattern: /<ul/g, replacement: '<ul class=\'py-2 list-disc\'' },
         { pattern: /<ol/g, replacement: '<ol class=\'py-2 list-decimal\'' },
         { pattern: /<li/g, replacement: '<li class=\'ml-8\'' },
+        //Linebreak
+        { pattern: /<p>/g, replacement: '<p class=\'my-2\'>' },
+
     ];
 
     // Apply markdown
