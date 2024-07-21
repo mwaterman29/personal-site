@@ -37,7 +37,7 @@ export default function Home() {
                     >
                         <p><span className='underline'>Maven Bio</span>, Senior Frontend Engineer</p>
                     </Link>
-                    <p>Feb 2022 - Feb 2024</p>
+                    <p>Feb 2024 - Present</p>
                 </div>
                 <p className='text-sm'>Lead developer on the front-end for an AI BioPharma intelligence startup - brought us from empty repository to product market fit.</p>
 
