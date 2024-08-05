@@ -3,7 +3,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Canvas, extend, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
-import { Box, CameraControls, Cylinder, PerspectiveCamera, Plane, Sphere, Torus } from '@react-three/drei'
+import { Box, CameraControls, Cylinder, OrbitControls, PerspectiveCamera, Plane, Sphere, Torus } from '@react-three/drei'
 
 const xStart = 10;
 const xRange = 50;
@@ -13,7 +13,7 @@ const zStart = 20;
 const zRange = 50;
 
 const speed = 25;
-const dropCount = 50;
+const dropCount = 250;
 const splashDuration = 0.25;
 
 const dropSplashCount = 3;
@@ -169,7 +169,7 @@ const Raindrop = ({x, z, initialDelay}: {x: number, z:number, initialDelay: numb
                     splashDrops.current[i] = ref;
                     //splashDrops.current.push(ref);
                 }}
-                args={[0.02, 20, 20]}
+                args={[0.02, 10, 10]}
                 material={splashDropMaterial}
                 />
             ))}
@@ -196,7 +196,7 @@ const testThreePage = () => {
             <p>Test new graphics for home</p>            
             <Canvas className='aspect-video h-full w-full'>
                 <PerspectiveCamera makeDefault position={[0, 0, 10]} fov={75}/>
-                <CameraControls />
+                <OrbitControls />
                 <RainScene />
                 <Box 
                 material-color='#1a1b1f'
