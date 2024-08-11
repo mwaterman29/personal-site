@@ -1,5 +1,5 @@
 import { Artist } from "@prisma/client";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 const ArtistAvatar = ({artist}: {artist: Artist}) => {
 

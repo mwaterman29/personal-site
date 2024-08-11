@@ -4,7 +4,7 @@ import path from 'path';
 import markdownToComponent from '@/util/ConvertMarkdown';
 import Link from 'next/link';
 import { prisma } from '@/prisma/client';
-import ArtistAvatar from '@/components/ArtistAvatar';
+import ArtistAvatar from '@/components/Music/ArtistAvatar';
 import getRatingColor from '@/util/getRatingColor';
 
 export default async function PostPage({ params }: { params: { name: string } }) 

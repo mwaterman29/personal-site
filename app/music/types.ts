@@ -4,5 +4,6 @@ type AlbumWithArtist = Album & {artist: Artist};
 type AlbumWithArtistAndSongs = AlbumWithArtist & {songs: Song[]};
 type SongWithAlbum = Song & {album: Album};
 type SongWithAlbumAndArtist = SongWithAlbum & {artist: Artist};
+type SingleWithArtist = Song & {artist: Artist};
 
-export type { AlbumWithArtist, AlbumWithArtistAndSongs, SongWithAlbum, SongWithAlbumAndArtist };
+export type { AlbumWithArtist, AlbumWithArtistAndSongs, SongWithAlbum, SongWithAlbumAndArtist, SingleWithArtist };

@@ -1,11 +1,12 @@
-import MusicHomePage from "@/components/MusicHomePage";
+import MusicHomePage from "@/components/Music/MusicHomePage";
 import { prisma } from "@/prisma/client";
 
 export default async function MusicPage()
 {
     const albumReviews = await prisma.album.findMany({
         include: {
-            artist: true
+            artist: true,
+            songs: true
         }
     });
 

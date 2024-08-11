@@ -1,30 +1,45 @@
-import { AlbumWithArtist } from "@/app/music/types";
+import { AlbumWithArtistAndSongs, SingleWithArtist } from "@/app/music/types";
 import getRatingColor from "@/util/getRatingColor";
 import { Album, Artist, Song } from "@prisma/client";
 import Link from "next/link";
 import ArtistAvatar from "./ArtistAvatar";
+import { format } from 'date-fns'
+import ReviewCard from "./ReviewCard";
 
-
-
-interface TopMusicPanelProps {
-    albums: AlbumWithArtist[];
+interface ReviewsPanelProps {
+    albums: AlbumWithArtistAndSongs[];
     songs: Song[];  
-    singles: Song[];    
+    singles: SingleWithArtist[];    
 }
 
-
-
-
-const TopMusicPanel = ({
+const ReviewsPanel = ({
     albums,
     songs,
     singles
-}: TopMusicPanelProps) => {
+}: ReviewsPanelProps) => 
+{
+    //Aggregate all albums and singles
+    const all = [...albums, ...singles];
+
     return (
         <div className="flex flex-col w-full">
-            <p>Top Albums</p>
+            <p>Recent Reviews</p>
             <div className="grid grid-cols-3 gap-4">
-                {albums.sort((a,b) => b.rating - a.rating).map((album) => {
+            {all.sort((a,b) => b.createdAt.getTime() - a.createdAt.getTime()).map((review) => {
+                return (
+                    <ReviewCard review={review} />
+                )
+            })}
+            </div>
+
+        </div>
+    )
+}
+
+export default ReviewsPanel;
+
+/*
+{albums.sort((a,b) => b.rating - a.rating).map((album) => {
                     return (
                         <Link
                         key={album.id}
@@ -50,10 +65,5 @@ const TopMusicPanel = ({
                         </Link>
                     )
                 })}
-            </div>
 
-        </div>
-    )
-}
-
-export default TopMusicPanel;
+*/

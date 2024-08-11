@@ -1,15 +1,16 @@
 'use client';
 
 import { useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import TopMusicPanel from "./TopMusicPanel";
 import { Album, Song } from "@prisma/client";
-import { AlbumWithArtist } from "@/app/music/types";
+import { AlbumWithArtist, AlbumWithArtistAndSongs, SingleWithArtist } from "@/app/music/types";
+import ReviewsPanel from "./ReviewsPanel";
 
 interface MusicHomePageProps {
-    albumReviews: AlbumWithArtist[];
+    albumReviews: AlbumWithArtistAndSongs[];
     allSongs: Song[];
-    singleReviews: Song[];
+    singleReviews: SingleWithArtist[];
     philosophyArticles: any[];   
 }
 
@@ -67,7 +68,7 @@ const MusicHomePage = ({
                     <TopMusicPanel albums={albumReviews} songs={allSongs} singles={singleReviews} />
                 </TabsContent>
                 <TabsContent value="reviews">
-                    <p>This page is under construction... more coming soon!</p>
+                    <ReviewsPanel albums={albumReviews} songs={allSongs} singles={singleReviews} />
                 </TabsContent>
                 <TabsContent value="philosophy">
                     <p>This page is under construction... more coming soon!</p>
