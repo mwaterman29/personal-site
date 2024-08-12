@@ -7,7 +7,7 @@ import {unified} from 'unified'
 import {rehype} from 'rehype'
 import rehypeHighlight from 'rehype-highlight'
 
-async function markdownToComponent(markdown: string) {    
+async function markdownToComponent(markdown: string, extraRules?: any[]) {    
 
     const file = await unified()
         .use(remarkParse)
@@ -90,6 +90,14 @@ async function markdownToComponent(markdown: string) {
     codeRules.forEach((rule) => {
         result = result.replace(rule.pattern, rule.replacement);
     });
+
+    //If extra rules are provided, apply them
+    if (extraRules) {
+        extraRules.forEach((rule) => {
+            console.log(rule);
+            result = result.replace(rule.pattern, rule.replacement);
+        });
+    }
 
     //XSS? Never heard of it.
     const comp = <div className='flex flex-col'

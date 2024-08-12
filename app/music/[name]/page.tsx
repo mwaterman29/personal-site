@@ -61,7 +61,15 @@ export default async function PostPage({ params }: { params: { name: string } })
         const endIndexOfContent = data.indexOf('Track Ratings:');
 
         const contentSlice = data.substring(startIndexOfContent, endIndexOfContent);
-        const content = await markdownToComponent(contentSlice);
+
+        const extraRules = album.songs.map((song) => {
+            return {
+                pattern: new RegExp(`\\b${song.title}\\b`, 'g'),
+                replacement: `${song.title} <span style="color: ${getRatingColor(song.rating)}">(${song.rating})</span>`
+            }
+        });
+
+        let content = await markdownToComponent(contentSlice, []); // extraRules);
 
         return (
             <div className='flex flex-col w-full items-center justify-center'>
