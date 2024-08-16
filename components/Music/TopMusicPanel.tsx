@@ -20,9 +20,9 @@ const TopMusicPanel = ({
         <div className="flex flex-col w-full">
             <p>Top Albums</p>
             <div className="grid grid-cols-3 gap-4">
-                {albums.sort((a,b) => b.rating - a.rating).map((album) => {
+                {albums.sort((a,b) => b.rating - a.rating).map((album, index) => {
                     return (
-                        <ReviewCard review={album} />
+                        <ReviewCard review={album} key={index} />
                     )
                 })}
             </div>
