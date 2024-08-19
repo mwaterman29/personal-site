@@ -72,7 +72,7 @@ export default function ReviewPage() {
                 placeholder="Review filename"
                 />
 
-            <p>Spotify (or other) link</p>
+            <p>Spotify Link</p>
             <input
                 className="w-full p-2 border border-gray-300 rounded mb-4 text-black"
                 type="text"
@@ -81,7 +81,7 @@ export default function ReviewPage() {
                 placeholder="Optional link"
             />
 
-            <p>Image link</p>
+            <p>Overload Image link</p>
             <input
                 className="w-full p-2 border border-gray-300 rounded mb-4 text-black"
                 type="text"
@@ -90,7 +90,7 @@ export default function ReviewPage() {
                 placeholder="Optional image link"
                 />
 
-            <p>Artist image link</p>
+            <p>Overload Artist image link</p>
             <input
                 className="w-full p-2 border border-gray-300 rounded mb-4 text-black"
                 type="text"

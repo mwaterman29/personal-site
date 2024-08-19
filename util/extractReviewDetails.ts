@@ -6,7 +6,8 @@ type ReviewExtractionResult = {
     trackRatings?: { name: string; rating: number }[];
   };
   
-export const extractReviewDetails = (reviewText: string): ReviewExtractionResult => {
+export const extractReviewDetails = (reviewText: string): ReviewExtractionResult => 
+  {
     const lines = reviewText.split('\n').map(line => line.trim()).filter(line => line !== '');
     const artistName = lines[1];
     const title = lines[0];

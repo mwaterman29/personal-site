@@ -21,6 +21,7 @@ async function getSpotifyAlbumData(album_id: string)
     const artist = await getSpotifyArtist(album_data_raw.artists[0].id, token);
 
     const structured = {
+        title: album_data_raw.name,
         image: album_data_raw.images[0].url,
         artist_image: artist.images[0].url,
         artist_name: artist.name,
