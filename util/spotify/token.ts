@@ -8,6 +8,7 @@ async function getSpotifyToken()
 
     const options = {
         method: 'POST',
+        cache: 'no-cache',
         headers: {
           'Authorization': 'Basic ' + Buffer.from(client_id + ':' + client_secret).toString('base64'),
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -17,8 +18,9 @@ async function getSpotifyToken()
         }),
     };
 
-    console.log(options);
+    //console.log(options);
 
+    //@ts-ignore -- This is a valid fetch call, cache is a valid option
     const resp = await fetch('https://accounts.spotify.com/api/token', options);
     const data = await resp.json();
 

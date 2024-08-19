@@ -22,9 +22,9 @@ const ReviewsPanel = ({
     const all = [...albums, ...singles];
 
     return (
-        <div className="flex flex-col w-full">
-            <p>Recent Reviews</p>
-            <div className="grid grid-cols-3 gap-4">
+        <div className="flex flex-col w-full items-center">
+            <p className="w-full text-start">Recent Reviews</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full">
             {all.sort((a,b) => b.createdAt.getTime() - a.createdAt.getTime()).map((review, index) => {
                 return (
                     <ReviewCard review={review} key={index}/>

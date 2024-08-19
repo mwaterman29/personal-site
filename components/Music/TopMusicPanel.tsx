@@ -19,7 +19,7 @@ const TopMusicPanel = ({
     return (
         <div className="flex flex-col w-full">
             <p>Top Albums</p>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                 {albums.sort((a,b) => b.rating - a.rating).map((album, index) => {
                     return (
                         <ReviewCard review={album} key={index} />

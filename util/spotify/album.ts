@@ -6,7 +6,7 @@ async function getSpotifyAlbumDataRaw(album_id: string, token: string)
     const album_data_response = await fetch(`https://api.spotify.com/v1/albums/${album_id}`, {
         headers: {
             'Authorization': 'Bearer ' + token
-        }
+        },
     });
 
     const album_data = await album_data_response.json();
@@ -17,8 +17,10 @@ async function getSpotifyAlbumData(album_id: string)
 {
     const token = await getSpotifyToken();
     const album_data_raw = await getSpotifyAlbumDataRaw(album_id, token);
+    console.log(album_data_raw);
 
     const artist = await getSpotifyArtist(album_data_raw.artists[0].id, token);
+
 
     const structured = {
         title: album_data_raw.name,

@@ -21,8 +21,8 @@ export default function RootLayout({
     'Resume' : '/resume',
     'Projects' : '/projects',
     'Posts' : '/posts',
-    'Contact' : '/contact',
     'Music' : '/music',
+    'Contact' : '/contact',
   }
 
   return (
@@ -31,7 +31,7 @@ export default function RootLayout({
         <div className='z-20 top-0 sticky bg-black'>
           <p className='p-8 xl:p-4 w-full text-center items-center text-4xl'>Matt Waterman</p>
           <hr className=''/>
-          <div className='flex flex-row justify-evenly w-full gap-4'>
+          <div className='flex flex-row justify-evenly w-full gap-4 max-w-[100dvw] overflow-x-auto'>
             {Object.entries(headerLinks).map(([key, value]) => (
               <Link key={key} href={value} className='group transition-all flex flex-row w-full h-full'>
                 <div className='flex flex-row items-center m-2 w-full h-full'>

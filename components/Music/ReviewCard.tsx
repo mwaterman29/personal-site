@@ -19,7 +19,7 @@ const ReviewCard = ({review}: {review: AlbumWithArtistAndSongs | SingleWithArtis
                 <p className="text-4xl line-clamp-2" title={review.title}>{review.title}</p>
                 <ArtistAvatar artist={review.artist} />
                 <div className="flex flex-row items-center justify-between">
-                    <p>Reviewed on {format(review.createdAt, 'MMMM, dd yyyy')}</p>
+                    <p>Reviewed on {format(review.createdAt, 'MMMM dd, yyyy')}</p>
                     <p className="p-1 bg-blue-400 rounded-md">{type}</p>
                 </div>
             </div>
