@@ -6,6 +6,8 @@ import getSpotifyAlbumData from "@/util/spotify/album";
 
 export async function GET(request: NextRequest) 
 {
+    return NextResponse.json({ message: "Test Return" });
+
     const id = '2cwwBz019F7hQwggBShXCv';
 
     const data = await getSpotifyAlbumData(id);
