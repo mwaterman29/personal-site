@@ -37,8 +37,17 @@ const config = {
         
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+
+        "album-slide": "albumSlide 2s ease-in-out forwards ",
+        "album-slide-back": "albumSlide 2s ease-in-out backwards reverse",
       },
       keyframes: {
+        albumSlide : {
+          '0%': { transform: 'perspective(450px)rotateX(10deg)',  },
+          '25%': { transform: 'perspective(450px)rotateX(15deg)translateY(-50px)'},
+          '75%': { transform: 'perspective(600px)rotateX(15deg)translateY(150px)'},
+          '100%': { transform: 'translateY(150px)'},
+        },
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
