@@ -4,18 +4,36 @@ import { Album, Artist, Song } from "@prisma/client";
 import Link from "next/link";
 import ArtistAvatar from "./ArtistAvatar";
 import { format } from 'date-fns'
-import { useState } from "react";
-
+import { useState, useEffect, useRef } from "react";
 
 const ShelfReviewCard = ({review}: {review: AlbumWithArtistAndSongs | SingleWithArtist}) => {
 
     const type = review.hasOwnProperty('songs') ? 'Album' : 'Single';
     const [selected, setSelected] = useState(false);
+    const cardRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => 
+    {
+        if (selected && cardRef.current) {
+            const rect = cardRef.current.getBoundingClientRect();
+            cardRef.current.style.position = 'absolute';
+            cardRef.current.style.top = `${rect.top}px`;
+            cardRef.current.style.left = `${rect.left}px`;
+            cardRef.current.style.width = `${rect.width}px`;
+            cardRef.current.style.height = `${rect.height}px`;
+
+            // Trigger reflow to apply the absolute positioning before animation
+            cardRef.current.offsetHeight;
+            
+            cardRef.current.classList.add('animate-album-slide');
+        }
+    }, [selected]);
 
     return (
         <div>
             <div
-            className={'flex items-center justify-center w-full max-w-full aspect-square cursor-pointer' + (selected ? ' animate-album-slide z-20 ' : ' z-0')}
+            ref={cardRef}
+            className={'flex items-center justify-center w-full max-w-full aspect-square cursor-pointer' + (selected ? ' z-20' : ' z-0')}
             onClick={() => {
                 setSelected(true);
             }}
@@ -34,6 +52,7 @@ const ShelfReviewCard = ({review}: {review: AlbumWithArtistAndSongs | SingleWith
 }
 
 export default ShelfReviewCard;
+
 
 /*
 
