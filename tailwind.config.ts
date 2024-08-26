@@ -45,8 +45,8 @@ const config = {
         albumSlide : {
           '0%': { transform: 'perspective(450px)rotateX(10deg)',  },
           '25%': { transform: 'perspective(450px)rotateX(15deg)translateY(-50px)'},
-          '75%': { transform: 'perspective(600px)rotateX(15deg)translateY(150px)'},
-          '100%': { transform: 'translateY(150px)'},
+          '75%': { transform: 'perspective(600px)rotateX(15deg)translateY(150px)', },
+          '100%': { transform: 'translateY(150px)scale(1.15)', position: 'absolute', top: '25%', left: '5vw', zIndex: '10' },
         },
         fadeIn: {
           '0%': { opacity: '0' },
