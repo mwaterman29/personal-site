@@ -10,12 +10,14 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@material-symbols/svg-400": "^0.23.0",
     "@prisma/client": "^5.16.2",
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-switch": "^1.1.0",
     "@radix-ui/react-tabs": "^1.1.0",
     "@react-three/drei": "^9.109.2",
     "@react-three/fiber": "^8.16.8",
+    "@svgr/webpack": "^8.1.0",
     "@types/nodemailer": "^6.4.14",
     "@types/three": "^0.166.0",
     "class-variance-authority": "^0.7.0",

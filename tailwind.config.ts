@@ -55,6 +55,7 @@ const config = {
           '100%': { 
             transform: 'translateY(150px) scale(1.15) ', 
             top: '20%', 
+            left: '5vw', 
             zIndex: '20' 
           },
         },
