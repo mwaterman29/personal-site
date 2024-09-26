@@ -12,7 +12,7 @@ interface AlbumCoverProps
 
 const AlbumCover = ({link, badges}: AlbumCoverProps) => {
     return (
-        <div className='relative flex items-center justify-center w-full max-w-full aspect-square pt-4'>
+        <div className='relative flex items-center justify-center w-full max-w-full aspect-square'>
             <img
                 className='object-contain items-center justify-center'
                 alt='Preview Image'
@@ -20,7 +20,7 @@ const AlbumCover = ({link, badges}: AlbumCoverProps) => {
             />    
 
             {badges.includes('favorite') && 
-                <div className="absolute top-2 right-0">
+                <div className="absolute top-0 right-0">
                     <TooltipProvider>
                         <Tooltip>
                             <TooltipTrigger>
@@ -39,7 +39,7 @@ const AlbumCover = ({link, badges}: AlbumCoverProps) => {
             }  
 
             {badges.includes('peak') && 
-                <div className="absolute top-2 left-0">
+                <div className="absolute top-0 left-0">
                     <TooltipProvider>
                         <Tooltip>
                             <TooltipTrigger>

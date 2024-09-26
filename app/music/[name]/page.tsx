@@ -8,6 +8,8 @@ import ArtistAvatar from '@/components/Music/ArtistAvatar';
 import getRatingColor from '@/util/getRatingColor';
 
 import OpenInNew from '@material-symbols/svg-400/outlined/open_in_new.svg';
+import AlbumCover from '@/components/Music/AlbumCover';
+import getBadges from '@/util/music/getBadges';
 
 export default async function PostPage({ params }: { params: { name: string } }) 
 {
@@ -74,17 +76,16 @@ export default async function PostPage({ params }: { params: { name: string } })
         let content = await markdownToComponent(contentSlice, []); // extraRules);
 
         return (
-            <div className='flex flex-col w-full items-center justify-center'>
+            <div className='flex flex-col w-full items-center justify-center px-2 xl:p-0'>
                 <div className='flex flex-col max-w-[120ch]'>
-                    <div className='flex flex-row pt-4'>
-                        <div className='flex items-center justify-center w-full max-w-[300px] aspect-square'>
-                            <img
-                                className='object-contain items-center justify-center'
-                                alt='Preview Image'
-                                src={album.imageLink}
+                    <div className='flex flex-col items-center md:flex-row pt-4'>
+                        <div className='flex items-center justify-center w-full max-w-[300px] aspect-square pt-4'>
+                            <AlbumCover
+                            link={album.imageLink}
+                            badges={getBadges(album)}
                             />
                         </div>
-                        <div className='flex flex-col justify-between h-[300px] p-4 pb-0 gap-y-2'>
+                        <div className='flex flex-col justify-between md:h-[300px] p-4 pt-2 pb-0 gap-y-2'>
                             <div className='flex flex-col gap-2'>
                                 <p className='text-4xl'>{album.title}</p>
                                 <ArtistAvatar artist={album.artist} />
@@ -124,16 +125,16 @@ export default async function PostPage({ params }: { params: { name: string } })
                         {album.songs.map((song) => {
                             return (
                                 <div key={song.id} className=''>
-                                    <p className=''>
-                                            {song.title}
-                                            &nbsp;-&nbsp;
-                                            <span
-                                            className=''
-                                            style={{color: getRatingColor(song.rating)}}
-                                            >
-                                                {song.rating}
-                                            </span>
-                                        </p>
+                                    <div className=''>
+                                        {song.title}
+                                        &nbsp;-&nbsp;
+                                        <span
+                                        className=''
+                                        style={{color: getRatingColor(song.rating)}}
+                                        >
+                                            {song.rating}
+                                        </span>
+                                    </div>
                                 </div>
                             )
                         })}

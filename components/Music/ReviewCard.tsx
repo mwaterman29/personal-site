@@ -12,53 +12,10 @@ import { useEffect, useState } from "react";
 import Star from '@material-symbols/svg-400/outlined/star-fill.svg';
 import Favorite from '@material-symbols/svg-400/outlined/favorite-fill.svg';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
+
 import AlbumCover from "./AlbumCover";
+import getBadges from "@/util/music/getBadges";
 
-function getBadges(review: AlbumWithArtistAndSongs | SingleWithArtist) 
-{
-    const songs = review.hasOwnProperty('songs') ? (review as AlbumWithArtistAndSongs).songs : [{title: (review as SingleWithArtist).title, link: (review as SingleWithArtist).link}];
-
-    const badges = [];
-
-    // If any of these urls are in my favorites, return the badge
-    const fav = songs.some(song => 
-    {   
-        if(!song)
-            return false;
-
-        if(favs.some(fav => fav.link === song.link))
-        {
-            return true;
-        }
-        if(favs.some(fav => fav.name.toLowerCase().includes(song.title.toLowerCase()) && fav.artist.toLowerCase().includes(review.artist.name.toLowerCase())))
-        {
-            return true;
-        }
-        return false;
-    })
-
-    if(fav)
-    {
-        badges.push('favorite');
-    }
-
-    //If this is an album with an average rating of 85 or higher, return the badge
-    if(review.hasOwnProperty('songs') && review.rating >= 8)
-    {
-        badges.push('peak');
-    }
-
-    //If this is a single with a rating of 100 or higher, return the badge
-    if(!review.hasOwnProperty('songs') && review.rating >= 100)
-    {
-        badges.push('peak');
-    }
-
-    //console.log(badges, 'for', review.title, songs, favs);
-
-    return badges;
-
-}
 
 const ReviewCard = ({review}: {review: AlbumWithArtistAndSongs | SingleWithArtist}) => {
 
