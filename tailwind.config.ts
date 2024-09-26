@@ -19,6 +19,10 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        'peak': '#ff6f08',
+        'favorite': '#8803fc',
+      },
       animation:
       {
         fadeIn1: 'fadeIn 1s ease-in-out forwards',

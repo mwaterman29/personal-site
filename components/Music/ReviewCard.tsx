@@ -7,7 +7,12 @@ import { format } from 'date-fns'
 import fetchFavorites from "@/util/spotify/fetch_favorites";
 import { favs } from "@/const/favs";
 import { useEffect, useState } from "react";
+
+//Icons
 import Star from '@material-symbols/svg-400/outlined/star-fill.svg';
+import Favorite from '@material-symbols/svg-400/outlined/favorite-fill.svg';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
+import AlbumCover from "./AlbumCover";
 
 function getBadges(review: AlbumWithArtistAndSongs | SingleWithArtist) 
 {
@@ -74,27 +79,8 @@ const ReviewCard = ({review}: {review: AlbumWithArtistAndSongs | SingleWithArtis
                 </div>
             </div>
 
-            <div className='relative flex items-center justify-center w-full max-w-full aspect-square pt-4'>
-                <img
-                    className='object-contain items-center justify-center'
-                    alt='Preview Image'
-                    src={review.imageLink!}
-                />    
+            <AlbumCover link={review.imageLink!} badges={badges} />
 
-                {badges.includes('peak') && 
-                    <div className="absolute top-2 right-0">
-                        <div className="relative w-0 h-0 border-b-[50px] border-r-[50px] border-b-transparent border-r-[#ff6f08] border-opacity-70">
-                            <div className="absolute right-[-46px] top-[0px]">
-                                <Star className="text-white text-[24px]" />
-                            </div>
-                        </div>
-                    </div>
-                }  
-
-                {badges.includes('favorite') && <div className="absolute top-0 left-2">
-                    <p>test</p>
-                </div>}
-            </div>
             <p 
             className="text-2xl w-full text-center"
             style={{color: getRatingColor(review.rating)}}>
