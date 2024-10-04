@@ -41,7 +41,7 @@ const ReviewCard = ({review}: {review: AlbumWithArtistAndSongs | SingleWithArtis
             <p 
             className="text-2xl w-full text-center"
             style={{color: getRatingColor(review.rating)}}>
-                {review.rating.toFixed(2)}
+                {type === 'Album' ? review.rating.toFixed(2) : review.rating}
             </p>
         </Link>
     )
