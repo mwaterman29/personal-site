@@ -8,9 +8,10 @@ interface AlbumCoverProps
 {
     link: string;
     badges: string[];
+    type: 'Album' | 'Single';
 }
 
-const AlbumCover = ({link, badges}: AlbumCoverProps) => {
+const AlbumCover = ({link, badges, type}: AlbumCoverProps) => {
     return (
         <div className='relative flex items-center justify-center w-full max-w-full aspect-square'>
             <img
@@ -31,7 +32,7 @@ const AlbumCover = ({link, badges}: AlbumCoverProps) => {
                                 </div>
                             </TooltipTrigger>
                             <TooltipContent className="bg-black text-white border-neutral-400">
-                                <p>This album is <span className="text-peak">peak</span>!</p>
+                                <p>This {type === 'Album' ? 'album' : 'song'} is <span className="text-peak">peak</span>!</p>
                             </TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
@@ -50,7 +51,11 @@ const AlbumCover = ({link, badges}: AlbumCoverProps) => {
                                 </div>
                             </TooltipTrigger>
                             <TooltipContent className="bg-black text-white border-neutral-400">
-                                <p>This album has one of my <span className="text-favorite">favorite songs</span> on it!</p>
+                                {
+                                    type === 'Album' ? 
+                                    <p>This album has one of my <span className="text-favorite">favorite songs</span> on it!</p> :
+                                    <p>This is one of my <span className="text-favorite">favorite songs</span>!</p>
+                                }
                             </TooltipContent>
                         </Tooltip>
                     </TooltipProvider>

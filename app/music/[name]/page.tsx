@@ -72,6 +72,7 @@ export default async function PostPage({ params }: { params: { name: string } })
                             <AlbumCover
                             link={album.imageLink}
                             badges={getBadges(album)}
+                            type={'Album'}
                             />
                         </div>
                         <div className='flex flex-col justify-between md:h-[300px] p-4 pt-2 pb-0 gap-y-2'>
@@ -157,6 +158,7 @@ export default async function PostPage({ params }: { params: { name: string } })
                             <AlbumCover
                             link={song.imageLink!}
                             badges={getBadges(single)}
+                            type={'Single'}
                             />
                         </div>
                         <div className='flex flex-col justify-between md:h-[300px] p-4 pt-2 pb-0 gap-y-2'>
