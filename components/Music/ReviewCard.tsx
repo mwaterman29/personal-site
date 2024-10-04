@@ -36,7 +36,7 @@ const ReviewCard = ({review}: {review: AlbumWithArtistAndSongs | SingleWithArtis
                 </div>
             </div>
 
-            <AlbumCover link={review.imageLink!} badges={badges} />
+            <AlbumCover link={review.imageLink!} badges={badges} type={type}/>
 
             <p 
             className="text-2xl w-full text-center"
