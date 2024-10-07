@@ -4,9 +4,26 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from '@/prisma/client'
 import getSpotifyAlbumData from "@/util/spotify/album";
+import extractSpotifyAlbumId from "@/util/spotify/extractAlbumId";
 
 export async function GET(request: NextRequest) 
 {
+    const params = request.nextUrl.searchParams
+
+    const albumId = params.get('album_id');
+    if(albumId)
+    {
+        const data = await getSpotifyAlbumData(albumId);
+
+        console.log("Spotify data extracted", data);
+
+        return NextResponse.json(data);
+
+    }
+
+		return NextResponse.json({ error: "No supported options provided" }, { status: 400 });
+
+
     const id = '58iEeJbYd6OBGRM0TiwltL';
 
     const data = await getSpotifyAlbumData(id);
@@ -14,3 +31,39 @@ export async function GET(request: NextRequest)
     return NextResponse.json(data);
 
 }
+
+
+/*
+
+	if(link.includes("spotify"))
+	{
+		const id = extractSpotifyAlbumId(link);
+		if(id)
+		{
+			const data = await getSpotifyAlbumData(id);
+			artistImageLink = artistImageLink.length > 0 ? artistImageLink : data.artist_image;
+			imageLink = imageLink.length > 0 ? imageLink : data.image;
+			artistName = artistName.length > 0 ? artistName : data.artist_name;
+			title = title.length > 0 ? title : data.title;
+
+			const structured = {
+				artistName,
+				title,
+				rating,
+				link,
+				artistImageLink,
+				imageLink,
+				reviewFile
+			};
+
+			console.log("Spotify data extracted", structured);
+
+			return NextResponse.json(structured);
+		}
+
+		return NextResponse.json({ error: "Invalid Spotify link" }, { status: 400 });
+
+	}
+	
+
+*/
