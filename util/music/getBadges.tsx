@@ -31,7 +31,7 @@ function getBadges(review: AlbumWithArtistAndSongs | SingleWithArtist)
     }
 
     //If this is an album with an average rating of 85 or higher, return the badge
-    if(review.hasOwnProperty('songs') && review.rating >= 8)
+    if(review.hasOwnProperty('songs') && review.rating >= 85)
     {
         badges.push('peak');
     }

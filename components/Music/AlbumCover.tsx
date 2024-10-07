@@ -20,7 +20,7 @@ const AlbumCover = ({link, badges, type}: AlbumCoverProps) => {
                 src={link}
             />    
 
-            {badges.includes('favorite') && 
+            {badges.includes('peak') && 
                 <div className="absolute top-0 right-0">
                     <TooltipProvider>
                         <Tooltip>
@@ -39,7 +39,7 @@ const AlbumCover = ({link, badges, type}: AlbumCoverProps) => {
                 </div>
             }  
 
-            {badges.includes('peak') && 
+            {badges.includes('favorite') && 
                 <div className="absolute top-0 left-0">
                     <TooltipProvider>
                         <Tooltip>
