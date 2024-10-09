@@ -2,48 +2,53 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 import getSpotifyAlbumData from "@/util/spotify/album";
+import extractSpotifyAlbumId from "@/util/spotify/extractAlbumId";
+import getSpotifyTrackData from "@/util/spotify/track";
 
 const prisma = new PrismaClient();
 
-function extractSpotifyAlbumId(url: string) 
-{
-	// URL format is https://open.spotify.com/album | track/[id]/some stuff - pull id w/ regex
-	const regex = /(?:album|track)\/([a-zA-Z0-9]+)/;
-	const match = url.match(regex);
-	return match ? match[1] : null;
-  }
-
 export async function POST(request: NextRequest) 
 {
+	// If this isn't local, return an error
+	if(process.env.NODE_ENV !== "development")
+	{
+		return NextResponse.json({ error: "This endpoint is only available locally" }, { status: 400 });
+	}
+	
+
 	let { artistName, isAlbum, title, rating, trackRatings, link, artistImageLink, imageLink, reviewFile } = await request.json();
 
 	//From the passed link, if it's a spotify link, extract the ID and fetch some information
 	if(link.includes("spotify"))
 	{
 		const id = extractSpotifyAlbumId(link);
-		if(id)
+
+		if(!id)
+		{
+			return NextResponse.json({ error: "Invalid Spotify link" }, { status: 400 });
+		}
+
+		if(link.includes("track"))
+		{
+			const data = await getSpotifyTrackData(id);
+			artistImageLink = artistImageLink.length > 0 ? artistImageLink : data.artist_image;
+			imageLink = imageLink.length > 0 ? imageLink : data.image;
+			artistName = artistName.length > 0 ? artistName : data.artist_name;
+			title = title.length > 0 ? title : data.title;
+		}
+		else if(link.includes("album"))
 		{
 			const data = await getSpotifyAlbumData(id);
 			artistImageLink = artistImageLink.length > 0 ? artistImageLink : data.artist_image;
 			imageLink = imageLink.length > 0 ? imageLink : data.image;
 			artistName = artistName.length > 0 ? artistName : data.artist_name;
 			title = title.length > 0 ? title : data.title;
-
-			console.log("Spotify data extracted", {
-				artistName,
-				title,
-				rating,
-				link,
-				artistImageLink,
-				imageLink,
-				reviewFile
-			});
 		}
-		
+		else
+		{
+			return NextResponse.json({ error: "Invalid Spotify link (only support track/album)" }, { status: 400 });
+		}
 	}
-	
-
-	//return NextResponse.json({ message: "Test Return" });
 	
 	try 
 	{

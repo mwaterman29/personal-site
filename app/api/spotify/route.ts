@@ -6,6 +6,9 @@ import { prisma } from '@/prisma/client'
 import getSpotifyAlbumData from "@/util/spotify/album";
 import extractSpotifyAlbumId from "@/util/spotify/extractAlbumId";
 
+//ex for testing secret of us
+//http://localhost:3000/api/spotify?album_id=56bdWeO40o3WfAD2Lja4dl
+
 export async function GET(request: NextRequest) 
 {
     const params = request.nextUrl.searchParams
