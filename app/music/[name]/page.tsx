@@ -55,7 +55,7 @@ export default async function PostPage({ params }: { params: { name: string } })
     
     let content = await markdownToComponent(contentSlice, []); // extraRules);
 
-    console.log(contentSlice);
+    //console.log(contentSlice);
 
     if(album)
     {
