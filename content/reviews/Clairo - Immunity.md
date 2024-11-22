@@ -32,7 +32,11 @@ Honestly, it's the guitar in this song that gets me emotionally. When it comes i
 
 There's another track, too, that I find to be deeply sad. White Flag !SM is absolutely heart-rending and has me more torn up than any other song in her whole discography. I'm not particularly sure what it is about it - some combination of seeing a past self in the lyrics, the sound of the instrumental, and the times in my life during which I listened to it the most, I guess - but it all makes for a deep personal connection to this song. 
 
-The only criticism I have for this album is the ending. I'm not in love with the last few songs - I just don't find them to affect me like the rest of the album does. They're not bad, by any means, they're 
+The only criticism I have for this album is the ending. I'm not in love with the last few songs - I just don't find them to affect me like the rest of the album does. They're not bad, by any means, they're still all fairly high scores, and I do enjoy them. But when I find myself wanting to listen to this album, digitally or on vinyl, it's because of alewife, and white flag, and that four-track run in the middle, not the ending.
+
+In closing - I’m really grateful for this record. I love how it sounds, the story it tells, and the place it’s had in my rotation over the past five years. I owe it more than just that, though, as honestly, without this album, I’m not sure my taste would be as wide as it is today. Gracie Abrams, Maude Latour, Devon Again, Juliana Chahayed, and many more, these are all artists I’m not sure I would have the same appreciation for if not for this album. 
+
+Thanks Claire :)
 
 Track Ratings:
 Alewife - 100
