@@ -30,8 +30,8 @@ function getBadges(review: AlbumWithArtistAndSongs | SingleWithArtist)
         badges.push('favorite');
     }
 
-    //If this is an album with an average rating of 85 or higher, return the badge
-    if(review.hasOwnProperty('songs') && review.rating >= 85)
+    //If this is an album with an average rating of 88 or higher, return the badge
+    if(review.hasOwnProperty('songs') && review.rating >= 88)
     {
         badges.push('peak');
     }
