@@ -42,19 +42,28 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
 
-        "album-slide": "albumSlide 2s ease-in-out forwards ",
-        "album-slide-back": "albumSlide 2s ease-in-out backwards reverse",
+        "album-slide": "albumSlide 2.5s ease-in-out forwards ",
+        "album-slide-back": "albumSlide 2.5s ease-in-out backwards reverse",
+        
+        slideOpen: 'slideOpen 0.5s ease-out forwards',
       },
       keyframes: {
         albumSlide : {
           '0%': { 
             transform: 'perspective(450px) rotateX(10deg)',  
+            left: 'var(--initial-left)',
           },
           '25%': { 
             transform: 'perspective(450px) rotateX(15deg) translateY(-50px) ', 
+            left: 'var(--initial-left)',
           },
-          '75%': { 
+          '50%': { 
             transform: 'perspective(600px) rotateX(15deg) translateY(150px) ', 
+            left: 'var(--initial-left)',
+          },
+          '60%': { 
+            transform: 'translateY(150px) scale(1.15) ', 
+            left: 'var(--initial-left)',
           },
           '100%': { 
             transform: 'translateY(150px) scale(1.15) ', 
@@ -63,6 +72,12 @@ const config = {
             zIndex: '20' 
           },
         },
+
+        slideOpen: {
+          '0%': { width: '0' },
+          '100%': { width: '40dvw' }, // Target width
+        },
+        
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
