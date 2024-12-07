@@ -17,13 +17,17 @@ const ShelfReviewCard = ({ review }: { review: AlbumWithArtistAndSongs | SingleW
 	const badges = getBadges(review);
 
 	const [selected, setSelected] = useState(false);
-    const [contentVisible, setContentVisible] = useState(false);
+	const [contentVisible, setContentVisible] = useState(false);
 	const cardRef = useRef<HTMLDivElement>(null);
+	const visibleTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
 	useEffect(() => {
-		if (selected && cardRef.current) {
+		if(!cardRef.current) return;
+
+		if (selected) 
+		{
 			const rect = cardRef.current.getBoundingClientRect();
-			cardRef.current.style.position = 'absolute';
+			cardRef.current.style.position = 'fixed';
 			cardRef.current.style.top = `${rect.top}px`;
 			cardRef.current.style.left = `${rect.left}px`;
 			cardRef.current.style.width = `${rect.width}px`;
@@ -37,7 +41,20 @@ const ShelfReviewCard = ({ review }: { review: AlbumWithArtistAndSongs | SingleW
 
 			cardRef.current.classList.add('animate-album-slide');
 		}
-	}, [selected]);
+		else
+		{
+			cardRef.current.style.position = '';
+			cardRef.current.style.top = '';
+			cardRef.current.style.left = '';
+			cardRef.current.style.width = '';
+			cardRef.current.style.height = '';
+			cardRef.current.classList.remove('animate-album-slide');
+
+			// Clear the timeout if the card is closed before the content is visible
+			if (visibleTimeoutRef.current) clearTimeout(visibleTimeoutRef.current);
+			
+		}
+	}, [selected, cardRef]);
 
 	return (
 		<div>
@@ -46,21 +63,26 @@ const ShelfReviewCard = ({ review }: { review: AlbumWithArtistAndSongs | SingleW
 				className={'flex items-center justify-center w-full max-w-full aspect-square cursor-pointer' + (selected ? ' z-20' : ' z-0')}
 				onClick={() => {
 					setSelected(true);
-                    setTimeout(() => {
-                        setContentVisible(true);
-                    }, 2500);
+					visibleTimeoutRef.current = setTimeout(() => {
+						setContentVisible(true);
+					}, 2500);
 				}}
 			>
 				<img className='object-contain items-center justify-center' alt='Preview Image' src={review.imageLink!} />
 			</div>
-			{selected && <div className='bg-black bg-opacity-50 absolute top-0 left-0 min-w-full min-h-full text-white z-10' onClick={() => {
-				setSelected(false);
-				setContentVisible(false);
-			}}>
-				
-			</div>}
+			{selected && (
+				<div
+					className='bg-black bg-opacity-50 fixed top-0 left-0 min-w-full min-h-full text-white z-10'
+					onClick={() => {
+						setSelected(false);
+						setContentVisible(false);
+						if (visibleTimeoutRef.current) 
+							clearTimeout(visibleTimeoutRef.current);
+					}}
+				></div>
+			)}
 			{contentVisible && (
-				<div className='absolute top-[calc(20%+126px)] left-[calc(5vw+348px)] w-[40dvw] z-20 h-[372px] bg-neutral-900 bg-opacity-80 p-4 animate-slideOpen overflow-hidden'>
+				<div className='fixed top-[calc(20%+126px)] left-[calc(5vw+348px)] w-[40dvw] z-20 h-[372px] bg-neutral-900 bg-opacity-80 p-4 animate-slideOpen overflow-hidden'>
 					<div className='flex flex-col gap-2 h-full min-w-[40dvw]'>
 						<div className='flex flex-col gap-2 h-full'>
 							<p className='text-4xl line-clamp-2' title={review.title}>
