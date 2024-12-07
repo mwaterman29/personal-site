@@ -53,10 +53,15 @@ const ShelfReviewCard = ({ review }: { review: AlbumWithArtistAndSongs | SingleW
 			>
 				<img className='object-contain items-center justify-center' alt='Preview Image' src={review.imageLink!} />
 			</div>
-			{selected && <div className='bg-black bg-opacity-50 absolute top-0 left-0 min-w-full min-h-full text-white z-10'></div>}
+			{selected && <div className='bg-black bg-opacity-50 absolute top-0 left-0 min-w-full min-h-full text-white z-10' onClick={() => {
+				setSelected(false);
+				setContentVisible(false);
+			}}>
+				
+			</div>}
 			{contentVisible && (
-				<div className='absolute top-[calc(20%+126px)] left-[calc(5vw+348px)] w-[40dvw] z-20 h-[372px] bg-neutral-900 bg-opacity-80 p-4 animate-slideOpen'>
-					<div className='flex flex-col gap-2 h-full'>
+				<div className='absolute top-[calc(20%+126px)] left-[calc(5vw+348px)] w-[40dvw] z-20 h-[372px] bg-neutral-900 bg-opacity-80 p-4 animate-slideOpen overflow-hidden'>
+					<div className='flex flex-col gap-2 h-full min-w-[40dvw]'>
 						<div className='flex flex-col gap-2 h-full'>
 							<p className='text-4xl line-clamp-2' title={review.title}>
 								{review.title}
