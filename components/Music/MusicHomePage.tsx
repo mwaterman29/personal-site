@@ -36,7 +36,7 @@ const MusicHomePage = ({ albumReviews, allSongs, singleReviews, philosophyArticl
 
 	return (
 		<div className='flex flex-col w-full h-full items-center justify-center'>
-			<Tabs className='w-full max-w-[120ch] p-4' value={tabSelected} onValueChange={setTabSelected}>
+			<Tabs className='w-full max-w-[1035px] p-4' value={tabSelected} onValueChange={setTabSelected}>
 				<TabsList className='w-full bg-black'>
 					<TabsTrigger className='group data-[state=active]:bg-neutral-800 bg-neutral-950 text-white data-[state=active]:text-white w-full text-xl ' value='top'>
 						<div className='transition-all'>
