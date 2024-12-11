@@ -75,7 +75,7 @@ const config = {
 
         slideOpen: {
           '0%': { width: '0' },
-          '100%': { width: '40dvw' }, // Target width
+          '100%': { width: 'calc(1200px-10dvw)' }, // Target width
         },
         
         fadeIn: {

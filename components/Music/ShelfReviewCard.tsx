@@ -82,8 +82,8 @@ const ShelfReviewCard = ({ review }: { review: AlbumWithArtistAndSongs | SingleW
 				></div>
 			)}
 			{contentVisible && (
-				<div className='fixed top-[calc(20%+126px)] left-[calc(5vw+348px)] w-[40dvw] z-20 h-[372px] bg-neutral-900 bg-opacity-80 p-4 animate-slideOpen overflow-hidden'>
-					<div className='flex flex-col gap-2 h-full min-w-[40dvw]'>
+				<div className='fixed top-[calc(20%+126px)] left-[calc(5vw+348px)] w-[calc(1201px-10dvw)] z-20 h-[372px] bg-neutral-900 bg-opacity-80 p-4 animate-slideOpen overflow-hidden'>
+					<div className='flex flex-col gap-2 h-full min-w-[1200px]'>
 						<div className='flex flex-col gap-2 h-full'>
 							<p className='text-4xl line-clamp-2' title={review.title}>
 								{review.title}
