@@ -1,0 +1,29 @@
+Twin Flame
+Maude Latour
+
+Twin Flame is a super fun, charming, easy-listening, sweet pop record from breakout pop singer Maude Latour, who really came to my attention following a recommendation to listen to I am not the sun. Since checking out the whole EP, and seeing her live when she toured with Devon Again, I've come to appreciate her role as a feel-good, down to earth singer who consistently delivers heartwarming tracks. My appreciation for this EP was absolutely bolstered by seeing her live; She is an unbelievably magnetic and charming performer with a wonderful voice and stage presence. Though the stage presence can't come through on the record, the rest of her energy, charm, and emotion absolutely does. This EP is a collection of very enjoyable pop with some really interesting ideas at play. Though the concept of a 'twin flame' may feel a bit trite, it serves as an enjoyable framework for some playful upbeat pop. Overall, I appreciate that this album tackles sweet love songs, huge-sounding and punchy tracks, and charming feel-good bangers, in just a short 21 minutes.
+
+As an opener, Twin Flame !SM certainly falls into the sweet love songs category, built on a straightforward instrumental, catchy chorus, and strong vocal performance. The sugar leans on saccharine here, and almost falls over into the corny category. However, it's redeemed by a few things. For one, this song doesn't feel artificial or commercial, I could genuinely believe this is about someone specific. Additionally, I think her vocal tone and delivery helps sell the song for me. Ultimately though, it's solidified for me by the delivery of the lines at the end:
+
+"The up and the down is just part of the fun
+And we're still in love!"
+
+There's some real emotion there, and it improves the whole song. 
+
+As for the tracks that feel big - they're back-to-back on the record. I am not the sun !SM and Minerals & Diamonds !SM are both great tracks, though the former is much better than the latter in my opinion. I am the sun might be her best song full stop: the panning 'oh my god, you're everything I've ever wanted', the imagery of deification, the modulation of her voice and the instrumental all makes for an incredible song. I find the repeating lyrics and pitch shifting on her voice to be so enthralling, as it feels somehow both huge and intimate at the same time, which earns major points. Next - Minerals & Diamonds, an interesting continuation after I am not the sun. I'm happy to hear the experimentation, as the vocal effects, electronic instrumental, and song structure all make for an interesting listen, though I'm not sure the execution is perfect. Honestly, this song is best as a foil to the rest of the album, as the vocal modulation, airy synths, and electronic melodies all serve to refresh and re-engage the listener. With a lot of modern pop, I feel as if the sound has overstayed its welcome halfway through the runtime. Even on an album as tight as this, seven songs that all sounded the same would bore me, and so having a song that's notably different and intriguing does a lot to help me stay engaged.
+
+Following the pair of compelling and intriguing tracks, we return to sweet love songs, and I'm so enamored with both No Rush !SM and Lovebomb !SM. No Rush fills its role as simple, sweet love song that tells a direct and enjoyable story. Though it doesn't make any exceptional choices, it's a summery, fun listen that has me rolling my windows down and singing along even when summer's more than over. Similarly, though a lot less of a sing-along type track, I'm still a big fan of Lovebomb. The warm and gentle intro with clear vocals that tell a sugary story of falling in love is really pleasant, to the ear and to the heart. There's some nice progression too, as the percussion comes in with layered vocals towards the end of the song, making for a really nice harmony of breathy vocals that I really love.
+
+Finally, the album closes on a pair of easy listening, feel good bangers. I'm a big fan of Heaven !SM - though it is not the most complex nor compelling song I've ever heard - it's a simple, feel good song with some light internal progression, nice imagery, and an addictive chorus. Dozens of listens later, and I enjoy singing along to the lyrics just as much as I did when I first learned them. The end is strong too - the breathy vocals towards the higher end of Maude's range absolutely work well as the instrumental melts away. For the final track on the album, Lunch !SM is probably the catchiest song in her whole discography. Though it's just a feel-good pop song, I find myself coming back to it over and over. I could pull apart the details of the percussion or the melody, but that would be a post-hoc rationalization for what I like about this song. Ultimately, it just sounds good and is fun to listen to, and it excels at those two things.
+
+Overall, the Twin Flame EP and live show that accompanied it are marked for me by nothing but pleasure. I look to Maude's music for a good time: to roll down my windows on a summer drive and sing along without a care in the world. She fits that need well, without sounding derivative or trite, and this genuine warmth towards love and life comes through clearly in her live performances. It's easy to write this type of music off as generic and boring, but having listened to huge swaths of other pop in this space, I find myself coming back to this EP much more than I do other albums and artists, and for that, it deserves my praise. For me, the diversity of sounds and styles - all of which are executed well - and the sheer enjoyment of listening contributes well to its lasting spot in my listening rotation. I can't wait to see her live again, and I'm sure that she'll be just as magnetic the second time!
+
+
+Track Ratings:
+Twin Flame - 85
+I am not the sun - 100
+Minerals & Diamonds - 70
+No Rush - 80
+Lovebomb - 85
+Heaven - 85
+Lunch - 95
