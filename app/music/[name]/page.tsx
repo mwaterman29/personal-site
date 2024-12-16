@@ -55,9 +55,18 @@ export default async function PostPage({ params }: { params: { name: string } })
     if(album)
     {
         extraRules = album.songs.map((song) => {
+
+            const fixTitle = (title: string) => {
+                let result = title;
+                result = result.replace('&', '&#x26;');
+                return result;
+            }
+
+            const fixedTitle = fixTitle(song.title);
+
             return {
-                pattern: new RegExp(`\\b${song.title} !SM\\b`, 'g'),
-                replacement: `${song.title} <span style="color: ${getRatingColor(song.rating)}">(${song.rating})</span>`
+                pattern: new RegExp(`\\b${fixedTitle} !SM\\b`, 'g'),
+                replacement: `${fixedTitle} <span style="color: ${getRatingColor(song.rating)}">(${song.rating})</span>`
             }
         });
     }
