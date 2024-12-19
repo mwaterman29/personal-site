@@ -1,7 +1,7 @@
 import { Artist } from "@prisma/client";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
-const ArtistAvatar = ({artist}: {artist: Artist}) => {
+const ArtistAvatar = ({artist, hideName}: {artist: Artist, hideName?: boolean}) => {
 
     const fallbackText = artist.name.split(' ').map((word) => word[0]).join('').slice(0, 2);
 
@@ -9,9 +9,9 @@ const ArtistAvatar = ({artist}: {artist: Artist}) => {
         <div className="flex flex-row items-center gap-x-2"> 
             <Avatar>
                 <AvatarImage src={artist.imageLink ?? undefined} />
-                <AvatarFallback>CN</AvatarFallback>
+                <AvatarFallback>fallbackText</AvatarFallback>
             </Avatar>
-            <p className="text-2xl">{artist.name}</p>
+            {!hideName && <p className="text-2xl">{artist.name}</p>}
         </div>
 
     )

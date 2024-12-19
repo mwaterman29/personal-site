@@ -3,15 +3,17 @@
 import Star from '@material-symbols/svg-400/outlined/star-fill.svg';
 import Favorite from '@material-symbols/svg-400/outlined/favorite-fill.svg';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
+import getRatingColor from '@/util/getRatingColor';
 
 interface AlbumCoverProps 
 {
     link: string;
     badges: string[];
     type: 'Album' | 'Single';
+    rating?: number;
 }
 
-const AlbumCover = ({link, badges, type}: AlbumCoverProps) => {
+const AlbumCover = ({link, badges, type, rating}: AlbumCoverProps) => {
     return (
         <div className='relative flex items-center justify-center w-full max-w-full aspect-square'>
             <img
@@ -61,6 +63,15 @@ const AlbumCover = ({link, badges, type}: AlbumCoverProps) => {
                     </TooltipProvider>
                 </div>
             }  
+
+            {rating && <div className='flex flex-row absolute bottom-0 right-0 min-w-8 min-h-2 '>
+                <div className='border-b-[50px] border-l-[50px] border-l-transparent border-b-black' />
+                <p 
+                className="text-2xl w-full text-center bg-black"
+                style={{color: getRatingColor(rating)}}>
+                    {type === 'Album' ? rating.toFixed(2) : rating}
+                </p>
+            </div>}
         </div>
     )
 }

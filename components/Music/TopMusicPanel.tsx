@@ -16,7 +16,7 @@ interface TopMusicPanelProps {
 }
 
 const TopMusicPanel = ({ albums, songs, singles }: TopMusicPanelProps) => {
-	const [shelfMode, setShelfMode] = useState(false);
+	const [shelfMode, setShelfMode] = useState(true);
 
 	const router = useRouter();
 	const searchParams = useSearchParams();
