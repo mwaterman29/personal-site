@@ -69,7 +69,7 @@ const AlbumCover = ({link, badges, type, rating, card}: AlbumCoverProps) => {
             {rating && <div className='flex flex-row absolute bottom-0 right-0 min-w-8 min-h-2 '>
                 <div className='border-b-[50px] border-l-[30px] border-l-transparent border-b-black' />
                 <p 
-                className="text-2xl w-full text-center bg-black p-2 px-4 rounded-br-md"
+                className="text-2xl w-full text-center bg-black p-2 pl-1 pr-2 rounded-br-md"
                 style={{color: getRatingColor(rating)}}>
                     {type === 'Album' ? rating.toFixed(2) : rating}
                 </p>

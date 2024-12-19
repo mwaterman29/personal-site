@@ -38,7 +38,7 @@ As we want maximum customizability, every single bone in the avatar can be custo
 
 Adding assets to the avatar is really simple! All you need to do is click an asset on the window and it'll automatically apply to the avatar. This automatically detects which base you're using, 
 
-As you can read more about [here](https://www.mwaterman.dev/projects/01_VRtex%20Marketplace.md), the assets are automatically downloaded once you purchase them on the site. It automatically unpacks the assets and allows them to be used.
+As you can read more about [here](https://www.mwaterman.dev/engineering/01_VRtex%20Marketplace.md), the assets are automatically downloaded once you purchase them on the site. It automatically unpacks the assets and allows them to be used.
 
 
 

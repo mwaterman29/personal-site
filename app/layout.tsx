@@ -23,8 +23,8 @@ export default function RootLayout({
   const headerLinks = {
     'Home': '/',
     'Resume' : '/resume',
-    'Projects' : '/projects',
-    'Posts' : '/posts',
+    'Engineering' : '/engineering',
+    //'Posts' : '/posts',
     'Music' : '/music',
     'Contact' : '/contact',
   }

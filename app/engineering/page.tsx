@@ -13,7 +13,19 @@ export default function Projects() {
     const files = fileNames.map(fname => readFileSync(path.join(directoryPath, fname), 'utf8'));
 
     return (
-    <main className="flex flex-col min-h-full">
+    <div className="flex flex-col min-h-full items-center justify-center gap-2">
+        <div className='flex flex-col items-center justify-center py-4 gap-2 max-w-[1000px]'>
+            <p className='text-2xl font-bold'>What am I working on?</p>
+            <p>The best way to see what I'm working on is to look at the <a href='https://mavenbio.io/changelog' className='text-blue-400 hover:text-blue-700 visited:text-purple-700'>changelog for my work (mavenbio.io)</a>. We post there biweekly, and as I have written practically 100% of the code on the front-end, it's the best place to see what I'm up to on a day-to-day basis.</p>
+            <p>If you're a BioPharma professional, particularly in BD or CI, check us out!</p>
+        </div>
+
+
+        <p className='pt-6 text-2xl font-bold'>
+            What have I worked on?
+        </p>
+        <hr />
+
         <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 p-4'>
             {files.map((data, _index) => {
                 /*
@@ -31,7 +43,7 @@ export default function Projects() {
 
                 return(
                     <Link 
-                        href={`/projects/${fileNames[_index]}`}
+                        href={`/engineering/${fileNames[_index]}`}
                         key={projTitle} className='flex w-full h-full items-center justify-center'>
                         <div className='bg-neutral-700 rounded-md p-4 h-full'>                        
                             <p className='text-2xl'>{projTitle}</p>
@@ -49,7 +61,7 @@ export default function Projects() {
                 )
             })}
         </div>
-    </main>
+    </div>
     )
 }
 
