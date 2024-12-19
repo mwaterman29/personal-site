@@ -26,10 +26,10 @@ const ReviewCard = ({review}: {review: AlbumWithArtistAndSongs | SingleWithArtis
         <Link
         key={review.id}
         href={`/music/${review.reviewFile}`} 
-        className="flex flex-col border rounded-md gap-y-2 items-start w-full">
-            <div className="flex flex-col gap-y-2 w-full min-h-[] justify-between">
+        className="flex flex-col border rounded-md gap-y-2 items-start w-full justify-between">
+            <div className="flex flex-col gap-y-2 w-full h-full justify-between">
 
-                <div className="flex flex-row gap-2 px-4 pt-4 items-start">
+                <div className="flex flex-row gap-2 px-4 pt-4 items-start min-h-[px]">
                     <ArtistAvatar artist={review.artist} hideName />
                     <div className="flex flex-col">
                        <p className="text-xl font-bold line-clamp-2" title={review.title}>{review.title}</p>
@@ -42,7 +42,7 @@ const ReviewCard = ({review}: {review: AlbumWithArtistAndSongs | SingleWithArtis
                 </div>
             </div>
 
-            <AlbumCover link={review.imageLink!} badges={badges} type={type} rating={review.rating}/>
+            <AlbumCover link={review.imageLink!} badges={badges} type={type} rating={review.rating} card/>
 
             <p 
             className="text-2xl w-full text-center hidden"

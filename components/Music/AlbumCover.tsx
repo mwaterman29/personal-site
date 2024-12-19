@@ -4,6 +4,7 @@ import Star from '@material-symbols/svg-400/outlined/star-fill.svg';
 import Favorite from '@material-symbols/svg-400/outlined/favorite-fill.svg';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
 import getRatingColor from '@/util/getRatingColor';
+import { cn } from '@/lib/utils';
 
 interface AlbumCoverProps 
 {
@@ -11,13 +12,14 @@ interface AlbumCoverProps
     badges: string[];
     type: 'Album' | 'Single';
     rating?: number;
+    card?: boolean;
 }
 
-const AlbumCover = ({link, badges, type, rating}: AlbumCoverProps) => {
+const AlbumCover = ({link, badges, type, rating, card}: AlbumCoverProps) => {
     return (
         <div className='relative flex items-center justify-center w-full max-w-full aspect-square'>
             <img
-                className='object-contain items-center justify-center'
+                className={cn('object-contain items-center justify-center ', (card ? 'rounded-b-md' : ''))}
                 alt='Preview Image'
                 src={link}
             />    
@@ -65,9 +67,9 @@ const AlbumCover = ({link, badges, type, rating}: AlbumCoverProps) => {
             }  
 
             {rating && <div className='flex flex-row absolute bottom-0 right-0 min-w-8 min-h-2 '>
-                <div className='border-b-[50px] border-l-[50px] border-l-transparent border-b-black' />
+                <div className='border-b-[50px] border-l-[30px] border-l-transparent border-b-black' />
                 <p 
-                className="text-2xl w-full text-center bg-black"
+                className="text-2xl w-full text-center bg-black p-2 px-4 rounded-br-md"
                 style={{color: getRatingColor(rating)}}>
                     {type === 'Album' ? rating.toFixed(2) : rating}
                 </p>
