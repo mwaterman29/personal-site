@@ -76,12 +76,10 @@ export default function Home() {
 
             <div className='opacity-0 animate-fadeIn3'>
                 <p className='w-full text-2xl text-center'>Programming Languages and Tools</p>
-                <p>I am primarily an expert in architecting '0-1' Next.js projects with Typescript, primarily styled with TailwindCSS. 
-                    This includes a mandatory understanding of React, Node, and the DOM. 
-                    I have experience with PostgreSQL and multiple ORMs. I use Redux for state management. 
-                    I have deployed Next.js apps to production with both Vercel and AWS, including the database, file storage, and routing.
-
-                </p>
+                <p>Languages: Typescript, C#, C++, Lua, Java</p>
+                <p>Frameworks: Next.js, React, React Native, .NET, .NET Core, </p>
+                <p>Software: Unity3D, PostgreSQL and MySQL, GitHub, Android Studio, Roblox Studio</p>
+                <p>Tools and Add-ons: TailwindCSS, Prisma, Unity XR Core, Unity Oculus Integration, Spicetify, Rojo</p>
             </div>
             <div className='min-h-[40px]'></div>
 
