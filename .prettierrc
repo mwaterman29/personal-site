@@ -1,0 +1,25 @@
+{
+	"tabWidth": 4,
+	"useTabs": true,
+	"semi": true,
+	"singleQuote": true,
+	"jsxSingleQuote": true,
+	"bracketSpacing": true,
+	"bracketSameLine": false,
+	"jsxBracketSameLine": false,
+	"arrowParens": "avoid",
+	"trailingComma": "none",
+	"printWidth": 160,
+	"plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-brace-style"],
+	"braceStyle": "allman",
+	"importOrder": [
+		"^react",
+		"^@material-symbols/svg-400/.*$",
+		"^@/components/ui/.*$",
+		"^@/components/.*$",
+		"^@/util/.*$",
+		"^[./]"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
+}
