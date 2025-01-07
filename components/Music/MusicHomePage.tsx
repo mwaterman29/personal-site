@@ -3,19 +3,20 @@
 import { useEffect, useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import TopMusicPanel from './TopMusicPanel';
-import { Album, Song } from '@prisma/client';
+import { Album, Essay, Song } from '@prisma/client';
 import { AlbumWithArtist, AlbumWithArtistAndSongs, SingleWithArtist } from '@/app/music/types';
 import ReviewsPanel from './ReviewsPanel';
 import { useRouter, useSearchParams } from 'next/navigation';
+import EssaysPanel from './EssaysPanel';
 
 interface MusicHomePageProps {
 	albumReviews: AlbumWithArtistAndSongs[];
 	allSongs: Song[];
 	singleReviews: SingleWithArtist[];
-	posts: any[];
+	essays: Essay[];
 }
 
-const MusicHomePage = ({ albumReviews, allSongs, singleReviews, posts }: MusicHomePageProps) => {
+const MusicHomePage = ({ albumReviews, allSongs, singleReviews, essays }: MusicHomePageProps) => {
 	const [tabSelected, setTabSelected] = useState('reviews');
 
 	const router = useRouter();
@@ -52,11 +53,11 @@ const MusicHomePage = ({ albumReviews, allSongs, singleReviews, posts }: MusicHo
 							{tabSelected === 'reviews' && <span className='block w-full transition-all duration-400 h-0.5 bg-white'></span>}
 						</div>
 					</TabsTrigger>
-					<TabsTrigger className='group data-[state=active]:bg-neutral-800 bg-neutral-950 text-white data-[state=active]:text-white w-full text-xl ' value='posts'>
+					<TabsTrigger className='group data-[state=active]:bg-neutral-800 bg-neutral-950 text-white data-[state=active]:text-white w-full text-xl ' value='essays'>
 						<div className='transition-all'>
-							<p className='text-2xl '>Posts</p>
-							{tabSelected !== 'posts' && <span className='block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-white'></span>}
-							{tabSelected === 'posts' && <span className='block w-full transition-all duration-400 h-0.5 bg-white'></span>}
+							<p className='text-2xl '>Essays</p>
+							{tabSelected !== 'essays' && <span className='block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-white'></span>}
+							{tabSelected === 'essays' && <span className='block w-full transition-all duration-400 h-0.5 bg-white'></span>}
 						</div>
 					</TabsTrigger>
 				</TabsList>
@@ -66,8 +67,8 @@ const MusicHomePage = ({ albumReviews, allSongs, singleReviews, posts }: MusicHo
 				<TabsContent value='reviews'>
 					<ReviewsPanel albums={albumReviews} songs={allSongs} singles={singleReviews} />
 				</TabsContent>
-				<TabsContent value='posts'>
-					<p>This page is under construction... more coming soon!</p>
+				<TabsContent value='essays'>
+					<EssaysPanel essays={essays} />
 				</TabsContent>
 			</Tabs>
 		</div>

@@ -24,9 +24,11 @@ export default async function MusicPage()
 
     const songs = await prisma.song.findMany({});
 
+    const essays = await prisma.essay.findMany({});
+
     return (
         <div className="flex flex-col w-full h-full">
-            <MusicHomePage albumReviews={albumReviews} allSongs={songs} singleReviews={singleReviews} posts={[]} />
+            <MusicHomePage albumReviews={albumReviews} allSongs={songs} singleReviews={singleReviews} essays={essays} />
         </div>
     )
 }
