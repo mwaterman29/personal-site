@@ -26,7 +26,7 @@ export default async function MusicPage()
 
     return (
         <div className="flex flex-col w-full h-full">
-            <MusicHomePage albumReviews={albumReviews} allSongs={songs} singleReviews={singleReviews} philosophyArticles={[]} />
+            <MusicHomePage albumReviews={albumReviews} allSongs={songs} singleReviews={singleReviews} posts={[]} />
         </div>
     )
 }

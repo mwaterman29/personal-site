@@ -19,31 +19,42 @@ model Artist {
 }
 
 model Album {
-  id         Int    @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   title      String
   rating     Float
   link       String
   reviewFile String // review file name
   imageLink  String
   artistId   Int
-  artist     Artist @relation(fields: [artistId], references: [id])
+  artist     Artist   @relation(fields: [artistId], references: [id])
   createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt 
+  updatedAt  DateTime @updatedAt
 
   songs Song[]
 }
 
 model Song {
-  id        Int     @id @default(autoincrement())
-  title     String
-  rating    Float
-  link      String? // Optional link
-  imageLink String? // Optional image link
-  albumId   Int? // Optional album
+  id         Int      @id @default(autoincrement())
+  title      String
+  rating     Float
+  link       String? // Optional link
+  imageLink  String? // Optional image link
+  albumId    Int? // Optional album
   reviewFile String? // review file name
-  album     Album?  @relation(fields: [albumId], references: [id])
-  artistId  Int
-  artist    Artist  @relation(fields: [artistId], references: [id])
+  album      Album?   @relation(fields: [albumId], references: [id])
+  artistId   Int
+  artist     Artist   @relation(fields: [artistId], references: [id])
   createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt 
+  updatedAt  DateTime @updatedAt
+}
+
+model Essay {
+  id          Int      @id @default(autoincrement())
+  title       String
+  imageLink   String
+  description String? // Optional string
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  fileLink    String
+  pinned      Boolean  @default(false)
 }

@@ -12,10 +12,10 @@ interface MusicHomePageProps {
 	albumReviews: AlbumWithArtistAndSongs[];
 	allSongs: Song[];
 	singleReviews: SingleWithArtist[];
-	philosophyArticles: any[];
+	posts: any[];
 }
 
-const MusicHomePage = ({ albumReviews, allSongs, singleReviews, philosophyArticles }: MusicHomePageProps) => {
+const MusicHomePage = ({ albumReviews, allSongs, singleReviews, posts }: MusicHomePageProps) => {
 	const [tabSelected, setTabSelected] = useState('reviews');
 
 	const router = useRouter();
@@ -52,11 +52,11 @@ const MusicHomePage = ({ albumReviews, allSongs, singleReviews, philosophyArticl
 							{tabSelected === 'reviews' && <span className='block w-full transition-all duration-400 h-0.5 bg-white'></span>}
 						</div>
 					</TabsTrigger>
-					<TabsTrigger className='group data-[state=active]:bg-neutral-800 bg-neutral-950 text-white data-[state=active]:text-white w-full text-xl ' value='philosophy'>
+					<TabsTrigger className='group data-[state=active]:bg-neutral-800 bg-neutral-950 text-white data-[state=active]:text-white w-full text-xl ' value='posts'>
 						<div className='transition-all'>
-							<p className='text-2xl '>Philosophy</p>
-							{tabSelected !== 'philosophy' && <span className='block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-white'></span>}
-							{tabSelected === 'philosophy' && <span className='block w-full transition-all duration-400 h-0.5 bg-white'></span>}
+							<p className='text-2xl '>Posts</p>
+							{tabSelected !== 'posts' && <span className='block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-white'></span>}
+							{tabSelected === 'posts' && <span className='block w-full transition-all duration-400 h-0.5 bg-white'></span>}
 						</div>
 					</TabsTrigger>
 				</TabsList>
@@ -66,7 +66,7 @@ const MusicHomePage = ({ albumReviews, allSongs, singleReviews, philosophyArticl
 				<TabsContent value='reviews'>
 					<ReviewsPanel albums={albumReviews} songs={allSongs} singles={singleReviews} />
 				</TabsContent>
-				<TabsContent value='philosophy'>
+				<TabsContent value='posts'>
 					<p>This page is under construction... more coming soon!</p>
 				</TabsContent>
 			</Tabs>
