@@ -1,5 +1,6 @@
 import { AlbumWithArtistAndSongs, SingleWithArtist } from "@/app/music/types";
 import { favs } from "@/const/favs";
+import isFavorite from "./isFavorite";
 
 
 function getBadges(review: AlbumWithArtistAndSongs | SingleWithArtist) 
@@ -11,18 +12,7 @@ function getBadges(review: AlbumWithArtistAndSongs | SingleWithArtist)
     // If any of these urls are in my favorites, return the badge
     const fav = songs.some(song => 
     {   
-        if(!song)
-            return false;
-
-        if(favs.some(fav => fav.link === song.link))
-        {
-            return true;
-        }
-        if(favs.some(fav => fav.name.toLowerCase().includes(song.title.toLowerCase()) && fav.artist.toLowerCase().includes(review.artist.name.toLowerCase())))
-        {
-            return true;
-        }
-        return false;
+        return isFavorite(song, review.artist.name);
     })
 
     if(fav)
