@@ -59,15 +59,20 @@ export default async function PostPage({ params }: { params: { name: string } })
 			const fixTitle = (title: string) =>
 			{
 				let result = title;
+                
+                //Escape HTML entities
 				result = result.replace('&', '&#x26;');
+
+                // Escape regex special characters
+                result = result.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 				return result;
 			};
 
 			const fixedTitle = fixTitle(song.title);
 
 			return {
-				pattern: new RegExp(`\\b${fixedTitle} !SM\\b`, 'g'),
-				replacement: `${fixedTitle} <span style="color: ${getRatingColor(song.rating)}">(${song.rating})</span>`
+				pattern: new RegExp(`${fixedTitle} !SM`, 'gi'),
+				replacement: `${song.title} <span style="color: ${getRatingColor(song.rating)}">(${song.rating})</span>`
 			};
 		});
 	}
