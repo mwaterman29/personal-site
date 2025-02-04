@@ -1,5 +1,6 @@
 'use client';
 
+import markdownToComponent from '@/util/ConvertMarkdown';
 import { extractEssayDetails } from '@/util/extractEssayDetails';
 import { useEffect, useState } from 'react';
 
@@ -10,11 +11,15 @@ export default function EssayPage()
 	const [fileLink, setFileLink] = useState<string>('');
 	const [pinned, setPinned] = useState(false);
 	const [extractionResult, setExtractionResult] = useState<{ title: string; description: string } | null>(null);
+	const [mdStaging, setMdStaging] = useState<any>(<></>);
 
 	const handleSubmit = async () =>
 	{
 		const result = extractEssayDetails(essayText);
 		setExtractionResult(result);
+
+		const md = await markdownToComponent(essayText ?? '');
+		setMdStaging(md);
 	};
 
 	const handleConfirm = async () =>
@@ -103,6 +108,14 @@ export default function EssayPage()
 						</button>
 					</div>
 				)}
+
+				<p>Staging:</p>
+
+				<div className='flex flex-col items-center justify-center'>
+					<div className='max-w-[1000px]'>
+						{mdStaging}
+					</div>
+				</div>
 			</div>
 		</div>
 	);
