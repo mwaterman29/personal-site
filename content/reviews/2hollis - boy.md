@@ -1,24 +1,38 @@
-Boy
+boy
 2hollis
 
-Wow, I had high expectations after how much I loved 2, but I'm still very impressed. This album alternates between extremely intense and very catchy, and generally handles both excellently. 'you once said my name for the first time' and 'teenage soldier' are super heavy, super intense, but very very strong songs - very powerful and compelling listens - both competing for the best song I've heard all year. Then, there's two bad, say it again, and especially light, which are extremely enjoyable and catchy listens.
+When I first got poster boy in my discover weekly, I couldn't have imagined the journey it would take me on. In the time since, I've listened to that song almost 1,000 times - with it being my top song of 2024, and 2hollis as my top artist. His overall sound is a perfect fit for my taste - as a lot of the modern 'electroclash' sounds to me like a matured version of the Monstercat EDM and Dubstep I grew up on. For this album, I had high expectations after how much I loved 2, but I'm still very impressed. On boy, we get the same electronic elements, retooled into a more modern sound, to great success. 2hollis's latest album exemplifies everything that makes him compelling - a collection of songs ranging from danceable and catchy to crushingly intense, all self-produced, written, and performed. 
 
-The back and forth between ripping you apart and catchy listen is super unique, and I expect to be coming back to this album for a long time. A few songs aren't total standouts, and sister's a little weird ngl but the overall sound and production are genuinely exceptional.
+The obvious standout for catchy is light !SM - another one of my top songs for 2024: big drops, addicting melody, and clean synths - all make this song super enjoyable and replayable.  Though straightforward, I think this song really excels at what it's trying to do. Every structural element works very well from end-to-end. The airy opening synths, the vocals, and touches of that main melody with the riser build for a great opening drop. I really like the progressive structure - as the first drop has just the bass, and then it's that second drop with that piercing melody is incredible. Another point on progression - although it might seem small, I actually really like the switch from "I think I'm off it" to "on it" as the song progresses. Fantastic track that still has me nodding along with it hundreds of listens later.
 
-favorites: teenage soldier, you once said my name for the first time, light, say it again, two bad
-least favorite: sister
+say it again !SM is similarly catchy - and feels the most descendant from that early 2010's EDM, as it feels like a Nitro Fun song to me. Punchy percussion, a highly digital and upbeat melody, and a straightforward yet enjoyable structure, all lend well to the replay value of the track. Where Nitro Fun or similar artists a decade ago might have delivered an 8-bit EDM track fit for the time, 2hollis delivers a much more modern take. With a catchy hook in the eponymous "why don't you say it again?", and a well-composed structure - this song takes those same sound palettes and retools them under the banner of electroclash. I really like the bridges on this song as well - as the instrumental almost entirely goes away, it contrasts well from the highly energetic verses. Overall, a very coherent, enjoyable, and highly replayable track.
+
+Though I love the catchy songs on this album deeply, the real strength of this album is in it's moments of crushing, overwhelming, visceral intensity - which happens on many of the songs here.
+
+ This quality is clear immediately, as it's the main feature of the opening track - you once said my name for the first time !SM. It starts slow - glowing, atmospheric pads in the back synergizing well with the breathy, forward vocals. As more vocal tracks come in, the instrumental continues to build, as he harmonizes with himself beautifully. It comes to a head as the instrumental sustains, and he whispers out 'for the last... time...'. The second half is absolutely ripping - heavy voice modulation and screaming, huge risers and fallers that let the instrumental inhale and exhale, and a real ethereal sense of atmosphere. One of the best tracks from 2024, and it's an amazing opener to this album. On 2, we got all 2s - which is a great track that sets the motifs and sound palette for that album well. This time around, though, 2hollis steps it up immensely, delivering an amazing track that demonstrates him taking his production, songwriting, and album quality to the next level.
+
+Much shorter, though just as intense, teenage soldier !SM is also among the most effectively intense songs I have ever heard, and is certainly another one of the best songs of 2024. The foreshadowing distorted bass hits, close-mic'd vocals, and building percussion create this tense, anticipatory atmosphere. This tension is immediately crushed by this colossal drop - the combination of the heavily distorted bass and arpeggiated melody is incredible - and is among the best of what this genre has to offer. The vocal delivery is excellent, too - the screamed 'remember my name' before the instrumental carries out the end of the track is very powerful. Though the verses are straightforward - they synergize well with the instrumental, and there are moments of somewhat ambiguous imagery that get at a real palpable tension:
+"Looking in the mirror, I don't see someone I know".
+"I guess they're right they say things change."
+Overall, this song is excellent - a coherent and deeply powerful track, and a true highlight on the album.
+ 
+Rounding out the extreme intensity is promise !SM: a divisive song, but one that I love. The gentle piano, barely audible whispers, and slow pacing complement the lyrics well. A perfect vignette for the guilt of hurting someone else. And then that huge, distorted, wall-of-sound synth comes in. Goosebumps, every time - and it was absolutely shattering live. That one-minute section has me in awe, and I think it works very well. With this, the contrast is push to its absolute limit: we get the quietest moments of the vocals, and the most subdued instrumental yet. Alongside that, we get the loudest, colossal, most soundstage-filling moment on the whole album. It feels like the instrumental is trying to scream - where there are no words, promise falls back to the intensity of the beat to get its ideas across. 
+
+This album works well as a concept album as well - both structurally, and in the narrative of the songs. Structurally, the transitions between songs are excellent - not truly exceptional like we might see on the likes of a Magdalena Bay album - but certainly a more-than-appreciable effort that enhances the front-to-back listening experience. Conceptually, too, I think it works well. Between dwelling on the start & end of things (fittingly on the opening and closing tracks), leaving her heartbroken and crying on teenage soldier, and failing your 'promise' not to 'lie' on those eponymous tracks. Overall, I'd say it works very well - but is spoiled in a couple places. First and foremost is sister - which is a misstep, in my opinion. Though the percussion of the song is excellent, and I really appreciate the vocal mixing, I don't think the content lands like it's supposed to. Even accepting the odd analogy, it could be written in a much more compelling way, but it'd be better altogether titled and written as something else. Similarly somewhat lacking is crush !SM - though the second half of the song is insane - punchy, slamming, I'm not enthralled with the writing. I get it - the repetitive and intrusive nature of a crush is embodied well in the structure and lyrics - but to be honest, I find the 'do you crush on me too' to be a bit trite - especially compared with the other songs on the album.
+
+In closing, this is an amazing album, and even more than that, an amazing display of artistry. boy, in essence, is a one-man album, straddling sound palettes and genres, and delivering banger after banger along the way. On light and say it again, we get some of the most loopable songs of 2024, and it's not at all a surprise that they both appeared in my Top 100. Even better - on you once said my name for the first time, and teenage soldier, we get the two most intense songs of 2024. For me, boy was a year-defining album, and taught me to love a genre I didn't even know existed. Having seen him live twice, had him as my top artist of 2024, and listened to both this album and 2 at least a dozen times each - I am undoubtedly a huge 2hollis fan. I cannot wait for his next singles, his next album, and when he comes back to Boston - hopefully at a much bigger venue this time. 
 
 Track Ratings:
 
 you once said my name for the first time - 105
 two bad - 90
-sister - 65 
+sister - 70
 crush - 80
-i saw it flash before me - 95
+i saw it flash before me - 100
 say it  - 75
 say it again - 95
 teenage soldier - 105
-lie - 75
+lie - 85
 promise - 90
 3 - 85
 light - 100
