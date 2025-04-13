@@ -1,0 +1,28 @@
+BEST HOUSE ON A BAD BLOCK
+1 800 PAIN
+
+This album is, plainly, ridiculous. 23 minutes of the most abrasive, explosive, off-the-wall tracks I've ever heard. Probably best categorized as 'industrial' hip-hop, this album is an ultimately singular experience that doesn't fit neatly in any box, certainly by design. Between the heavily modulated vocals, industrial clattering that passes for percussion, and lyrics that range from confusing to appalling, BEST HOUSE ON A BAD BLOCK is not an accessible album. Despite the initial difficulty - there are many interesting ideas here, and I really do believe this is a quality album. Though it's easy to write off as unlistenable, in this review, I'll make the case that this album is worth your time, due to its good writing, wild production, and overall unique style.
+
+The writing on this album... stands out. Though a lot of the content is objectionable, it's also undeniably quality, and does build an unsettling and uncomfortable atmosphere in a very unique way. Sometimes, it's just funny hooks, of which there are many - only a handful of which I'm willing to quote in writing on my website. On the opener, DESTROYUSALL !SM: "I got two twin Glocks, name 'em Zack and Cody // I got shooters on your block, built like Shaq and Kobe". The double entendre of shooters, the pop culture reference, and the similar sounds of the two lines is all very clever. Similarly, on LEGO !SM - the whole chorus playing on leggo my eggo, "I ain't read a book since Holes" and particularly "I might light your block up like I'm Qbert" - completely in-touch, funny writing. Finally, on CRACK !SM - "Sell crack rock out my house off of YouTube // I make way more money than you do" - just has me laughing every time. Though these are just a couple of the standout examples - there's great writing across the record with wild references on almost every track.
+
+Other times, the writing supports the vibe well. From the album cover's color grading, the unsettling image, and the all-caps song titles, the vibe here is clearest on two back-to-back songs, OUTSIDE !SM and LURK !SM. On OUTSIDE, the repeated Where you at? I'm outside!, particularly over the punchy bass and percussion is effectively unsettling. Similarly, the 'I just wanna know more about you // Now I know way too much about you' is definitely effective. Although it's a bit odd to praise a narrative about stalking someone online, 
+
+Though this album is abrasive, there are also times where it's pleasant, euphonic, or even beautiful. The end of the opening track, DESTROYUSALL definitely feels this way, with 
+The best example, though, is the end of CRACK. After the intense track before it, we're left with just the sound of a guitar, strings clearly audible. I really love when you can hear guitar strings - but here it's even better as a foil to the heavily distorted and abrasive album that came before it. I think of this like the end of Guest House by Daughters - a simplified, gentler end after an abrasive and unsettling experience. 
+
+Of course, I can't talk about this album without talking about HURT !SM, the standout hit that brought this album lots of well-deserved attention. The "Hello, PAIN!" from Drake and Josh, immediately into the industrial, mechanical, ripping instrumental - is a perfect microcosm for what makes this album great. The head-on train collision of internet culture and industrial/hardcore results in this emergent fusion that has me coming back again and again. This song is legitimately catchy, has some wild bars on it, and has some of the best production that this record has to offer. Between the repeated 'hurt, hurt, hurt' with the punchy percussion under it, and that distorted instrumental that's present throughout, this track is just awesome. 
+
+This album is not perfect, of course, and there are times where it does not stick the landing. Although I like the sound palette, mostly, there are times when it becomes grating. Particularly, on LURK. The percussion feels overmixed, and the "I don't need it" over and over is just slightly too unlistenable to really be enjoyable. Conversely, where LURK is doing too much, CAKE !SM is not doing enough. I actually like the idea of it, and the the swampy, muddled introduction is actually very effective for continuing to push the vibe and atmosphere of this album forward. That said, I would really hope for some internal progression in this song - it mostly just doesn't go anywhere effectively. The lyrical change is somewhat incoherent, and the sped up and slowed down sections just do not work in my opinion. Total falter on the execution, especially at the end of the song,  
+
+In closing - this is a good album. Is it abrasive, weird, unsettling, and absolutely impossible to recommend to people in real life? Yes. Is it intriguing, well-produced, and a thoroughly enjoyable listen? Also yes. As I see it - there's more than enough unintriguing, inoffensive music out there - and so I'm glad to have an album like this that's unapologetically explosive, aggressive, and over-the-top. Almost five years out from its release, and I still find myself coming back to this album every so often for the sound palette of this album that is truly unique. All that to say - give this album a shot - hopefully you'll like what you hear!
+
+
+Track Ratings:
+DESTROYUSALL - 85
+HURT - 100
+LEGO - 90
+SHELF - 80
+OUTSIDE - 90
+LURK - 70
+CAKE - 60
+CRACK - 95
