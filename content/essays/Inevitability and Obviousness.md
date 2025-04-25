@@ -1,3 +1,7 @@
+Inevitability and Obviousness
+
+An essay about songs that feel obvious, others that feel unique, and how there's beauty in both.
+
 At my best, I like to analyze music not for its sound, not for its lyrical content, nor even the elements that compose it. Though I love to talk about breathy vocals, textured bass, and a whole variety of synths, I think my best musical analysis is of the second-order qualities of songs and albums. For example - songs feeling conceptually similar - despite being wildly different genres; songs matching certain vibes or situations; or qualities in songs that are on the edges of your comprehensions - ones that take a real effort to hammer out into being explainable. Here - I hope to do that final thing, explaining a concept I've been mulling for a while.
 
 In the summer of 2023 - I had many an afternoon where my friends would come over and we'd cook together. Of course, we had music on, as any set of recreational chefs would. A few times, between the joking "Yes chefs" and clanging of pots and pans, you might have heard Intro by the xx. One of the most iconic indie hits, loved for its understated yet compelling feel. It really stuck with me, and over time, I came to figure out why. I think of Intro to be obvious, inevitable, almost mandatory - as if it is just an emergent consequence of music, something waiting to be discovered, rather than something that is decided upon or composed consciously. In a way, that's really a beautiful thing, and something that has me coming back to this track. 
