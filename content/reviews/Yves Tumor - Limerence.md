@@ -1,3 +1,6 @@
+Yves Tumor
+Limerence
+
 Limerence - a state of mind resulting from romantic feelings for another person. It typically involves intrusive and melancholic thoughts, or tragic concerns for the object of one's affection, along with a desire for the reciprocation of one's feelings and to form a relationship with the object of love.
 
 If any song suits its name perfectly - it’s this one. If you gave me years at a DAW, at a desk with pen and paper, or at an easel, I’m not sure I could get the idea across as well as this song does. Love - often explored but rarely captured successfully - feels absolutely perfect here.
