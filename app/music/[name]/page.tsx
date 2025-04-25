@@ -78,11 +78,26 @@ export default async function PostPage({ params }: { params: { name: string } })
 	}
 
 	const contentSlice = data.substring(startIndexOfContent, endIndexOfContent);
+	const ratingSlice = data.substring(endIndexOfContent, data.length);
 
 	let content = await markdownToComponent(contentSlice, extraRules);
 
 	if (album)
 	{
+		// Sort songs based on their order of appearance in the content
+		const sortedSongs = [...album.songs].sort((a, b) => {
+			// Check position in the original content for both songs
+			const aPos = ratingSlice.indexOf(a.title);
+			const bPos = ratingSlice.indexOf(b.title);
+			
+			// If song title not found in content, place at the end
+			if (aPos === -1) return 1;
+			if (bPos === -1) return -1;
+			
+			// Otherwise sort by position
+			return aPos - bPos;
+		});
+
 		return (
 			<div className='flex flex-col w-full items-center justify-center px-2 xl:p-0'>
 				<div className='flex flex-col max-w-[1200px]'>
@@ -120,7 +135,7 @@ export default async function PostPage({ params }: { params: { name: string } })
 					<hr className='my-8' />
 					<p className='text-2xl'>Track Ratings</p>
 					<div className='flex flex-col gap-y-1 pt-6'>
-						{album.songs.map(song =>
+						{sortedSongs.map(song =>
 						{
 							const isFavoriteSong = isFavorite(song, album.artist.name);
 

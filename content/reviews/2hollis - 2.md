@@ -16,14 +16,14 @@ Speaking of the lower voice - I'm a huge fan. I'm honestly pretty resistant to m
 Overall, interesting album, well produced, and an impressive showing from 2hollis. Will absolutely keep this in my rotation along with his other work. It wouldn't surprise me if poster boy was in my top 3 songs this year - it's so addictive, so well produced, so loopable, and just a truly incredible song.
 
 Track Ratings:
-all 2s - 85
+all 2s - 95
 poster boy - 105
-GOD - 95
+GOD - 90
 trust - 80
 FORFEIT - 90
 nothing2 lose - 75
-blackbirds - 80
+blackbirds - 85
 fame runner - 90
-2 u - 80
+2 u - 85
 PLASTER - 75
 it will never be the same - 70

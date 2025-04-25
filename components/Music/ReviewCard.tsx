@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 //Icons
 import Star from '@material-symbols/svg-400/outlined/star-fill.svg';
 import Favorite from '@material-symbols/svg-400/outlined/favorite-fill.svg';
+import InfoIcon from '@material-symbols/svg-400/outlined/info.svg';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
 
 import AlbumCover from "./AlbumCover";
@@ -21,6 +22,8 @@ const ReviewCard = ({review}: {review: AlbumWithArtistAndSongs | SingleWithArtis
 
     const type = review.hasOwnProperty('songs') ? 'Album' : 'Single';
     const badges = getBadges(review);
+
+    const hasRevision = review.revision_date !== null && review.revision_date !== undefined;
 
     return (
         <Link
@@ -37,7 +40,26 @@ const ReviewCard = ({review}: {review: AlbumWithArtistAndSongs | SingleWithArtis
                     </div>
                 </div>
                 <div className="flex flex-row items-center justify-between text-sm p-2 pb-0">
-                    <p>Reviewed on {format(review.createdAt, 'MMMM dd, yyyy')}</p>
+                    <div className="flex items-center gap-1">
+                        <p>Reviewed on {format(review.createdAt, 'MMMM dd, yyyy')}</p>
+                        {hasRevision && (
+                            <TooltipProvider>
+                                <Tooltip>
+                                    <TooltipTrigger asChild>
+                                        <div className="cursor-help">
+                                            <InfoIcon className="h-4 w-4 text-blue-500" />
+                                        </div>
+                                    </TooltipTrigger>
+                                    <TooltipContent className="max-w-xs">
+                                        <p>Revised on {format(new Date(review.revision_date!), 'MMMM dd, yyyy')}</p>
+                                        {review.revision_notes && (
+                                            <p className="mt-1 text-xs">{review.revision_notes}</p>
+                                        )}
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
+                        )}
+                    </div>
                     <p className="p-1 bg-blue-400 rounded-md">{type}</p>
                 </div>
             </div>

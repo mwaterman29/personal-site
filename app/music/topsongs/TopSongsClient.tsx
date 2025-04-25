@@ -28,43 +28,41 @@ export default function TopSongsClient({ songsByRating }: TopSongsClientProps)
 			{/* Mountain SVG - fixed position */}
 			<div className='fixed left-0 bottom-0 w-2/5 h-full opacity-20 pointer-events-none'>
 				<svg viewBox='0 0 100 100' preserveAspectRatio='none' className='h-full w-full'>
-					{/* Mountain base - more natural shape */}
-					<path 
-						d="M0,100 L20,70 L40,85 L60,40 L80,60 L100,100 Z" 
-						fill='#888'
+					{/* More natural mountain shape */}
+					<path
+						d="M0,100 L30,70 Q40,60 50,65 T70,75 L100,100 Z"
+						fill='#555' // Darker gray for the base
 					/>
-					{/* Snowy peaks - more natural shape */}
-					<path 
-						d="M35,45 L50,25 L65,45 L60,50 L40,50 Z" 
-						fill='white'
-					/>
-					<path 
-						d="M45,35 L55,25 L65,35 L60,40 L50,40 Z" 
-						fill='white'
+					{/* Smoother, more integrated peak */}
+					<path
+						d="M40,65 Q50,40 60,65 T70,70 L40,75 Z" // Adjusted coordinates to connect better
+						fill='white' // Snowy peak
 					/>
 				</svg>
 			</div>
 
 			{/* Animated clouds - more natural looking */}
 			<motion.div
-				className='fixed left-5 top-40 opacity-20 pointer-events-none'
-				initial={{ x: -100, opacity: 0 }}
-				animate={{ x: 0, opacity: 0.2 }}
-				transition={{ duration: 2 }}
+				className='fixed left-10 top-32 opacity-15 pointer-events-none' // Adjusted position and opacity
+				initial={{ x: -150, opacity: 0 }} // Start further off-screen
+				animate={{ x: 0, opacity: 0.15 }} // Animate to final opacity
+				transition={{ duration: 2.5, ease: "easeOut" }} // Smoother easing
 			>
-				<svg width='160' height='80' viewBox='0 0 160 80' fill='white'>
-					<path d='M40,40 C30,25 10,25 10,40 C10,55 0,60 10,70 C20,80 50,80 60,70 C70,80 100,80 110,70 C120,60 110,55 110,40 C110,25 90,25 80,40 C70,25 50,25 40,40 Z' />
+				{/* Fluffier cloud shape */}
+				<svg width='180' height='90' viewBox='0 0 180 90' fill='white'>
+					<path d="M30,70 Q10,70 10,50 Q10,30 30,30 Q40,10 60,30 Q80,30 90,40 Q110,35 120,50 Q140,50 140,70 L30,70 Z" />
 				</svg>
 			</motion.div>
 
 			<motion.div
-				className='fixed left-60 top-20 opacity-20 pointer-events-none'
+				className='fixed left-40 top-20 opacity-10 pointer-events-none' // Adjusted position and opacity
 				initial={{ x: -100, opacity: 0 }}
-				animate={{ x: 0, opacity: 0.2 }}
-				transition={{ duration: 2.5, delay: 0.3 }}
+				animate={{ x: 0, opacity: 0.1 }} // Animate to final opacity
+				transition={{ duration: 3, delay: 0.5, ease: "easeOut" }} // Longer duration, delay, smoother easing
 			>
-				<svg width='140' height='70' viewBox='0 0 140 70' fill='white'>
-					<path d='M30,30 C22,18 8,18 8,30 C8,42 0,46 8,54 C16,62 38,62 46,54 C54,62 76,62 84,54 C92,46 84,42 84,30 C84,18 70,18 62,30 C54,18 38,18 30,30 Z' />
+				{/* Another fluffy cloud */}
+				<svg width='150' height='75' viewBox='0 0 150 75' fill='white'>
+					<path d="M25,60 Q5,60 5,40 Q5,20 25,20 Q35,5 50,20 Q65,20 75,30 Q90,25 100,40 Q120,40 120,60 L25,60 Z" />
 				</svg>
 			</motion.div>
 
