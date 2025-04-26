@@ -6,7 +6,7 @@ import Link from 'next/link';
 import getRatingColor from '@/util/getRatingColor';
 import ArtistAvatar from '@/components/Music/ArtistAvatar';
 import { Song, Artist } from '@prisma/client';
-
+import SvgMountain from '@/components/SvgMountain';
 type SongWithArtist = Song & {
 	artist: Artist;
 	album?: {
@@ -25,46 +25,8 @@ export default function TopSongsClient({ songsByRating }: TopSongsClientProps)
 {
 	return (
 		<div className='min-h-screen bg-black text-white overflow-hidden relative'>
-			{/* Mountain SVG - fixed position */}
-			<div className='fixed left-0 bottom-0 w-2/5 h-full opacity-20 pointer-events-none'>
-				<svg viewBox='0 0 100 100' preserveAspectRatio='none' className='h-full w-full'>
-					{/* More natural mountain shape */}
-					<path
-						d="M0,100 L30,70 Q40,60 50,65 T70,75 L100,100 Z"
-						fill='#555' // Darker gray for the base
-					/>
-					{/* Smoother, more integrated peak */}
-					<path
-						d="M40,65 Q50,40 60,65 T70,70 L40,75 Z" // Adjusted coordinates to connect better
-						fill='white' // Snowy peak
-					/>
-				</svg>
-			</div>
 
-			{/* Animated clouds - more natural looking */}
-			<motion.div
-				className='fixed left-10 top-32 opacity-15 pointer-events-none' // Adjusted position and opacity
-				initial={{ x: -150, opacity: 0 }} // Start further off-screen
-				animate={{ x: 0, opacity: 0.15 }} // Animate to final opacity
-				transition={{ duration: 2.5, ease: "easeOut" }} // Smoother easing
-			>
-				{/* Fluffier cloud shape */}
-				<svg width='180' height='90' viewBox='0 0 180 90' fill='white'>
-					<path d="M30,70 Q10,70 10,50 Q10,30 30,30 Q40,10 60,30 Q80,30 90,40 Q110,35 120,50 Q140,50 140,70 L30,70 Z" />
-				</svg>
-			</motion.div>
-
-			<motion.div
-				className='fixed left-40 top-20 opacity-10 pointer-events-none' // Adjusted position and opacity
-				initial={{ x: -100, opacity: 0 }}
-				animate={{ x: 0, opacity: 0.1 }} // Animate to final opacity
-				transition={{ duration: 3, delay: 0.5, ease: "easeOut" }} // Longer duration, delay, smoother easing
-			>
-				{/* Another fluffy cloud */}
-				<svg width='150' height='75' viewBox='0 0 150 75' fill='white'>
-					<path d="M25,60 Q5,60 5,40 Q5,20 25,20 Q35,5 50,20 Q65,20 75,30 Q90,25 100,40 Q120,40 120,60 L25,60 Z" />
-				</svg>
-			</motion.div>
+			<SvgMountain className='absolute top-[60px] left-[-240px] w-full h-full min-h-[1000px] min-w-[1000px]' width={900} height={1000} color='gray' snowLine={0.3} snowLineDecorationCount={8} snowLineDecorationHeightRatio={0.7} />
 
 			<div className='container mx-auto px-4 py-12 relative z-10'>
 				{/* Right-justified header - smaller size */}

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-svg {
+svg:not(.svg-exclude-size) {
   width: 1em;
   height: 1em;
 }
