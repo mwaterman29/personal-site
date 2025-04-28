@@ -26,7 +26,7 @@ export default function TopSongsClient({ songsByRating }: TopSongsClientProps)
 	return (
 		<div className='min-h-screen bg-black text-white overflow-hidden relative'>
 
-			<SvgMountain className='absolute top-[60px] left-[-240px] w-full h-full min-h-[1000px] min-w-[1000px]' width={900} height={1000} color='gray' snowLine={0.3} snowLineDecorationCount={8} snowLineDecorationHeightRatio={0.7} />
+			<SvgMountain className='fixed top-[160px] left-[-240px] w-full h-full min-h-[1000px] min-w-[1000px] opacity-70' width={900} height={1000} color='gray' snowLine={0.3} snowLineDecorationCount={8} snowLineDecorationHeightRatio={0.7} />
 
 			<div className='container mx-auto px-4 py-12 relative z-10'>
 				{/* Right-justified header - smaller size */}
