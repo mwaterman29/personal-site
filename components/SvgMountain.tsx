@@ -51,7 +51,7 @@ const SvgMountain = ({
 				fill={'white'}
 			/>
 			{decorationPoints.map((points, i) => (
-				<polygon points={points.map(p => `${p[0]},${p[1]}`).join(' ')} fill='white' />
+				<polygon key={i} points={points.map(p => `${p[0]},${p[1]}`).join(' ')} fill='white' />
 			))}
 		</svg>
 	);

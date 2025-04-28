@@ -39,7 +39,7 @@ const SvgMountain = ({width, height, color = 'gray', snowLine = 0.2, snowLineDec
             <polygon points={`${top[0]},${top[1]} ${bottomLeft[0]},${bottomLeft[1]} ${bottomRight[0]},${bottomRight[1]}`} fill={color}/>
             <polygon points={`${top[0]},${top[1]} ${snowLineBottomLeft[0]},${snowLineBottomLeft[1]} ${snowLineBottomRight[0]},${snowLineBottomRight[1]}`} fill={'white'} />
             {decorationPoints.map((points, i) => (
-                <polygon points={points.map(p => `${p[0]},${p[1]}`).join(' ')} fill='white'/>
+                <polygon key={i} points={points.map(p => `${p[0]},${p[1]}`).join(' ')} fill='white'/>
             ))}
         </svg>
     )
