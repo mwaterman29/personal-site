@@ -6,7 +6,8 @@ import Link from 'next/link';
 import getRatingColor from '@/util/getRatingColor';
 import ArtistAvatar from '@/components/Music/ArtistAvatar';
 import { Song, Artist } from '@prisma/client';
-import SvgMountain from '@/components/SvgMountain';
+import ApexBars from '@/components/ApexBars';
+
 type SongWithArtist = Song & {
 	artist: Artist;
 	album?: {
@@ -25,15 +26,14 @@ export default function TopSongsClient({ songsByRating }: TopSongsClientProps)
 {
 	return (
 		<div className='min-h-screen bg-black text-white overflow-hidden relative'>
-
-			<SvgMountain className='fixed top-[160px] left-[-240px] w-full h-full min-h-[1000px] min-w-[1000px] opacity-70' width={900} height={1000} color='gray' snowLine={0.3} snowLineDecorationCount={8} snowLineDecorationHeightRatio={0.7} />
+			<ApexBars className='fixed bottom-[-40px] left-0 opacity-40 z-0' width={500} height={660} baseColor={180} barCount={28} attenuation={7} />
+			
+			<motion.div className='w-[500px] text-center items-center justify-center fixed h-[188px] flex flex-col gap-4' initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
+				<h1 className='text-4xl md:text-5xl font-bold'>Top Songs</h1>
+				<p className='text-xl text-gray-400'>My all-time top rated songs, stratified by rating.</p>
+			</motion.div>
 
 			<div className='container mx-auto px-4 py-12 relative z-10'>
-				{/* Right-justified header - smaller size */}
-				<motion.div className='text-right mb-16' initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
-					<h1 className='text-4xl md:text-5xl font-bold'>Top Songs</h1>
-				</motion.div>
-
 				{/* Score brackets */}
 				<div className='space-y-16 md:ml-[25%]'>
 					{Object.entries(songsByRating)
@@ -58,7 +58,8 @@ export default function TopSongsClient({ songsByRating }: TopSongsClientProps)
 								{/* Songs in rows with hover cards */}
 								<div className='space-y-3'>
 									<TooltipProvider>
-										{songs.map((song, songIndex) => {
+										{songs.map((song, songIndex) =>
+										{
 											const description = getSongDescription(song);
 											const songElement = (
 												<Link href={getSongLink(song)}>
@@ -84,18 +85,14 @@ export default function TopSongsClient({ songsByRating }: TopSongsClientProps)
 												>
 													{description ? (
 														<Tooltip>
-															<TooltipTrigger asChild>
-																{songElement}
-															</TooltipTrigger>
+															<TooltipTrigger asChild>{songElement}</TooltipTrigger>
 															<TooltipContent className='bg-black border border-white border-opacity-30 p-3 max-w-xs'>
 																<p className='font-semibold text-white'>{song.title}</p>
 																<p className='text-sm text-gray-300 mt-1'>by {song.artist.name}</p>
 																<p className='text-sm mt-2' style={{ color: getRatingColor(song.rating) }}>
 																	Rating: {song.rating}
 																</p>
-																<p className='text-sm text-gray-400 mt-2'>
-																	{description}
-																</p>
+																<p className='text-sm text-gray-400 mt-2'>{description}</p>
 															</TooltipContent>
 														</Tooltip>
 													) : (
@@ -114,23 +111,28 @@ export default function TopSongsClient({ songsByRating }: TopSongsClientProps)
 	);
 }
 
-function getSongDescription(song: SongWithArtist): string | null {
+function getSongDescription(song: SongWithArtist): string | null
+{
 	// This is a placeholder - you'll want to replace this with actual descriptions
 	// You could store these in your database or in a separate configuration file
 	const descriptions: Record<string, string> = {
-        // "Heaven Surrounds Us Like A Hood": "The best song of all time. The best guitar tone, the highest apex, and the most deeply enthralling song I have ever heard.",
-        // "Jackie (Sewerslvt Remake)": "Absolutely ripping ",
-        // "Operator": "",
+		// "Heaven Surrounds Us Like A Hood": "The best song of all time. The best guitar tone, the highest apex, and the most deeply enthralling song I have ever heard.",
+		// "Jackie (Sewerslvt Remake)": "Absolutely ripping ",
+		// "Operator": "",
 	};
 
 	return descriptions[song.title] || null;
 }
 
-function getSongLink(song: SongWithArtist): string {
-	if (song.reviewFile) {
+function getSongLink(song: SongWithArtist): string
+{
+	if (song.reviewFile)
+	{
 		// If it's a single with its own review
 		return `/music/${song.reviewFile}`;
-	} else if (song.albumId) {
+	}
+	else if (song.albumId)
+	{
 		// If it's part of an album, link to the album with a deeplink
 		return `/music/${song.album?.reviewFile}?deeplink=${encodeURIComponent(song.title)}`;
 	}
