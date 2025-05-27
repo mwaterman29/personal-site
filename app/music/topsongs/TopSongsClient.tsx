@@ -26,7 +26,14 @@ export default function TopSongsClient({ songsByRating }: TopSongsClientProps)
 {
 	return (
 		<div className='min-h-screen bg-black text-white overflow-hidden relative'>
-			<ApexBars className='fixed bottom-[-40px] left-0 opacity-40 z-0' width={500} height={660} baseColor={180} barCount={28} attenuation={7} />
+			<ApexBars 
+				className='absolute top-0 left-0 opacity-20 z-0' 
+				width={600} 
+				height={400} 
+				baseColor={150} 
+				barCount={30} 
+				attenuation={20} 
+			/>
 			
 			<motion.div className='w-[500px] text-center items-center justify-center fixed h-[188px] flex flex-col gap-4' initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
 				<h1 className='text-4xl md:text-5xl font-bold'>Top Songs</h1>
