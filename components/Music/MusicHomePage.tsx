@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import TopMusicPanel from './TopMusicPanel';
 import { Album, Essay, Song } from '@prisma/client';
 import { AlbumWithArtist, AlbumWithArtistAndSongs, SingleWithArtist } from '@/app/music/types';
-import ReviewsPanel from './ReviewsPanel';
+import LatestPanel from './LatestPanel';
 import { useRouter, useSearchParams } from 'next/navigation';
 import EssaysPanel from './EssaysPanel';
 
@@ -17,7 +17,7 @@ interface MusicHomePageProps {
 }
 
 const MusicHomePage = ({ albumReviews, allSongs, singleReviews, essays }: MusicHomePageProps) => {
-	const [tabSelected, setTabSelected] = useState('reviews');
+	const [tabSelected, setTabSelected] = useState('top');
 
 	const router = useRouter();
     const searchParams = useSearchParams();
@@ -46,11 +46,11 @@ const MusicHomePage = ({ albumReviews, allSongs, singleReviews, essays }: MusicH
 							{tabSelected === 'top' && <span className='block w-full transition-all duration-400 h-0.5 bg-white'></span>}
 						</div>
 					</TabsTrigger>
-					<TabsTrigger className='group data-[state=active]:bg-neutral-800 bg-neutral-950 text-white data-[state=active]:text-white w-full text-xl ' value='reviews'>
+					<TabsTrigger className='group data-[state=active]:bg-neutral-800 bg-neutral-950 text-white data-[state=active]:text-white w-full text-xl ' value='latest'>
 						<div className='transition-all'>
-							<p className='text-2xl '>Reviews</p>
-							{tabSelected !== 'reviews' && <span className='block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-white'></span>}
-							{tabSelected === 'reviews' && <span className='block w-full transition-all duration-400 h-0.5 bg-white'></span>}
+							<p className='text-2xl '>Latest</p>
+							{tabSelected !== 'latest' && <span className='block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-white'></span>}
+							{tabSelected === 'latest' && <span className='block w-full transition-all duration-400 h-0.5 bg-white'></span>}
 						</div>
 					</TabsTrigger>
 					<TabsTrigger className='group data-[state=active]:bg-neutral-800 bg-neutral-950 text-white data-[state=active]:text-white w-full text-xl ' value='essays'>
@@ -64,8 +64,8 @@ const MusicHomePage = ({ albumReviews, allSongs, singleReviews, essays }: MusicH
 				<TabsContent value='top'>
 					<TopMusicPanel albums={albumReviews} songs={allSongs} singles={singleReviews} />
 				</TabsContent>
-				<TabsContent value='reviews'>
-					<ReviewsPanel albums={albumReviews} songs={allSongs} singles={singleReviews} />
+				<TabsContent value='latest'>
+					<LatestPanel albums={albumReviews} songs={allSongs} singles={singleReviews} essays={essays} />
 				</TabsContent>
 				<TabsContent value='essays'>
 					<EssaysPanel essays={essays} />

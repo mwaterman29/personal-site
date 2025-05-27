@@ -7,6 +7,9 @@ export default async function MusicPage()
         include: {
             artist: true,
             songs: true
+        },
+        orderBy: {
+            createdAt: 'desc'
         }
     });
 
@@ -19,12 +22,19 @@ export default async function MusicPage()
         include: {
             artist: true,
             album: true
-        } 
+        },
+        orderBy: {
+            createdAt: 'desc'
+        }
     });
 
     const songs = await prisma.song.findMany({});
 
-    const essays = await prisma.essay.findMany({});
+    const essays = await prisma.essay.findMany({
+        orderBy: {
+            createdAt: 'desc'
+        }
+    });
 
     return (
         <div className="flex flex-col w-full h-full">

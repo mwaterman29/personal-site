@@ -40,25 +40,44 @@ const TopMusicPanel = ({ albums, songs, singles }: TopMusicPanelProps) => {
 	}, [shelfMode, router]);
 
 	return (
-		<div className='flex flex-col w-full'>
-			<div className='flex flex-row items-center justify-between p-2 gap-4'>
-				<p className='text-2xl font-semibold'>Top Albums</p>
-				<div className='flex flex-row items-center gap-x-2'>
-					<p className={shelfMode ? '' : 'font-bold'}>Card Mode</p>
-					<Switch checked={shelfMode} onCheckedChange={setShelfMode} />
-					<p className={shelfMode ? 'font-bold' : ''}>Shelf Mode</p>
+		<div className='flex flex-col w-full gap-8'>
+			{/* Top Songs Section */}
+			<div className='flex flex-col w-full'>
+				<div className='flex flex-row items-center justify-between p-2 gap-4'>
+					<h2 className='text-2xl font-semibold'>Top Songs</h2>
+					<Link 
+						href='/music/topsongs' 
+						className='text-blue-400 hover:text-blue-300 hover:underline transition-colors'
+					>
+						View All →
+					</Link>
 				</div>
+				<p className='text-neutral-400 px-2 pb-4'>
+					My all-time highest rated songs, stratified by rating.
+				</p>
 			</div>
-			<div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
-				{albums
-					.sort((a, b) => b.rating - a.rating)
-					.map((album, index) => {
-						if (shelfMode) {
-							return <ShelfReviewCard review={album} key={index} />;
-						} else {
-							return <ReviewCard review={album} key={index} />;
-						}
-					})}
+
+			{/* Top Albums Section */}
+			<div className='flex flex-col w-full'>
+				<div className='flex flex-row items-center justify-between p-2 gap-4'>
+					<p className='text-2xl font-semibold'>Top Albums</p>
+					<div className='flex flex-row items-center gap-x-2'>
+						<p className={shelfMode ? '' : 'font-bold'}>Card Mode</p>
+						<Switch checked={shelfMode} onCheckedChange={setShelfMode} />
+						<p className={shelfMode ? 'font-bold' : ''}>Shelf Mode</p>
+					</div>
+				</div>
+				<div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
+					{albums
+						.sort((a, b) => b.rating - a.rating)
+						.map((album, index) => {
+							if (shelfMode) {
+								return <ShelfReviewCard review={album} key={index} />;
+							} else {
+								return <ReviewCard review={album} key={index} />;
+							}
+						})}
+				</div>
 			</div>
 		</div>
 	);
