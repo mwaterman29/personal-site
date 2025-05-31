@@ -43,32 +43,32 @@ const TopMusicPanel = ({ albums, songs, singles }: TopMusicPanelProps) => {
 	return (
 		<div className='flex flex-col w-full gap-8'>
 			{/* Top Songs Section */}
-			<div className='flex flex-col w-full relative pt-6 pb-12'>
+			<Link href='/music/topsongs' className='flex flex-col w-full relative pt-6 pb-12'>
 				{/* ApexBars decoration */}
 				<ApexBars 
-					className='absolute top-0 left-0 opacity-40 z-0' 
+					className='absolute top-0 left-0 opacity-80 z-0' 
 					width={300} 
 					height={200} 
 					baseColor={180} 
 					barCount={15} 
 					attenuation={12} 
+					noAnim
 				/>
 				
 				<div className='relative z-10 pl-[25%]'>
 					<div className='flex flex-row items-center justify-between p-2 gap-4 '>
 						<h2 className='text-2xl font-semibold'>Top Songs</h2>
-						<Link 
-							href='/music/topsongs' 
+						<div
 							className='text-blue-400 hover:text-blue-300 hover:underline transition-colors'
 						>
 							View All →
-						</Link>
+						</div>
 					</div>
 					<p className='text-neutral-400 px-2 pb-4'>
 						My all-time highest rated songs, stratified by rating.
 					</p>
 				</div>
-			</div>
+			</Link>
 
 			{/* Separator */}
 			<hr className='border-neutral-700' />
