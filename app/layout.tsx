@@ -30,8 +30,8 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en">
-      <body className={inter.className + " min-h-screen bg-black text-white"}>
+    <html lang="en" className={inter.variable}>
+      <body className="font-inter min-h-screen bg-black text-white">
         <div className='z-20 top-0 sticky bg-black'>
           <p className='p-8 xl:p-4 w-full text-center items-center text-4xl'>Matt Waterman</p>
           <hr className=''/>
