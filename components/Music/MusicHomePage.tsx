@@ -17,7 +17,7 @@ interface MusicHomePageProps {
 }
 
 const MusicHomePage = ({ albumReviews, allSongs, singleReviews, essays }: MusicHomePageProps) => {
-	const [tabSelected, setTabSelected] = useState('top');
+	const [tabSelected, setTabSelected] = useState('latest');
 
 	const router = useRouter();
     const searchParams = useSearchParams();
@@ -38,7 +38,7 @@ const MusicHomePage = ({ albumReviews, allSongs, singleReviews, essays }: MusicH
 	return (
 		<div className='flex flex-col w-full h-full items-center justify-center'>
 			<Tabs className='w-full max-w-[1035px] p-4' value={tabSelected} onValueChange={setTabSelected}>
-				<TabsList className='w-full bg-black'>
+				<TabsList className='w-full bg-black mb-4'>
 					<TabsTrigger className='group data-[state=active]:bg-neutral-800 bg-neutral-950 text-white data-[state=active]:text-white w-full text-xl ' value='top'>
 						<div className='transition-all'>
 							<p className='text-2xl '>Top</p>
