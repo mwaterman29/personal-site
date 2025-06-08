@@ -102,7 +102,7 @@ const TopMusicPanel = ({ albums, songs, singles }: TopMusicPanelProps) =>
 
 			{/* Top Albums Section */}
 			<div className='flex flex-col w-full items-center'>
-				<div className='flex flex-row items-center justify-between p-2 gap-4'>
+				<div className='flex flex-row items-center justify-between p-2 gap-4 w-full'>
 					<p className='text-2xl font-semibold'>Top Albums</p>
 					{!isMobile && (
 						<div className='flex flex-row items-center gap-x-2'>
