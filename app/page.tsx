@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <main className="flex flex-col lg:flex-row min-h-full p-2 md:p-6 lg:p-12 xl:p-14 relative">
       {/* Gradient decoration */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rating-green via-rating-cyan to-rating-purple opacity-60"></div>
       
       <div className='flex basis-4/12 mx-4 rounded-md h-1/2 md:h-full'>
         <Carousel
@@ -24,7 +23,7 @@ export default function Home() {
           ]}
           />
       </div>
-      <div className='flex flex-col basis-8/12 gap-4'>      
+      <div className='flex flex-col basis-8/12 gap-4 md:pl-8'>      
         <div className="relative">
           <p className='text-center lg:text-left text-4xl pt-6 md:pt-0 md:pb-2'>Hi, I&#39;m Matt!</p>
           <div className="absolute bottom-0 left-0 w-24 h-0.5 bg-gradient-to-r from-rating-green via-rating-cyan to-rating-purple opacity-80"></div>

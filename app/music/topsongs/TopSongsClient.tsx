@@ -29,12 +29,12 @@ export default function TopSongsClient({ songsByRating }: TopSongsClientProps)
 			
 			<ApexBars className='fixed bottom-[-40px] left-0 opacity-80 z-0' width={500} height={660} baseColor={180} barCount={28} attenuation={7} />
 			
-			<motion.div className='w-[500px] text-center items-center justify-center fixed h-[188px] flex flex-col gap-4' initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
+			<motion.div className='w-[500px] text-center items-center justify-center fixed left-0 top-36 h-[188px] flex flex-col gap-4' initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
 				<h1 className='text-4xl md:text-5xl font-bold'>Top Songs</h1>
 				<p className='text-xl text-gray-400'>My all-time top rated songs, stratified by rating.</p>
 			</motion.div>
 
-			<div className='container mx-auto px-4 py-12 relative z-10'>
+			<div className='container mx-auto px-4 pt-20 pb-12 relative z-10'>
 				{/* Score brackets */}
 				<div className='space-y-16 md:ml-[25%]'>
 					{Object.entries(songsByRating)
