@@ -42,22 +42,34 @@ const MusicHomePage = ({ albumReviews, allSongs, singleReviews, essays }: MusicH
 					<TabsTrigger className='group data-[state=active]:bg-neutral-800 bg-neutral-950 text-white data-[state=active]:text-white w-full text-xl ' value='top'>
 						<div className='transition-all'>
 							<p className='text-2xl '>Top</p>
-							{tabSelected !== 'top' && <span className='block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-white'></span>}
-							{tabSelected === 'top' && <span className='block w-full transition-all duration-400 h-0.5 bg-white'></span>}
+							{tabSelected !== 'top' && (
+								<span className='block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-gradient-to-r from-rating-green via-rating-cyan to-rating-purple bg-[length:200%_100%] group-hover:animate-gradient-shift-delayed'></span>
+							)}
+							{tabSelected === 'top' && (
+								<span className='block w-full transition-all duration-400 h-0.5 bg-gradient-to-r from-rating-green via-rating-cyan to-rating-purple bg-[length:200%_100%] animate-gradient-shift'></span>
+							)}
 						</div>
 					</TabsTrigger>
 					<TabsTrigger className='group data-[state=active]:bg-neutral-800 bg-neutral-950 text-white data-[state=active]:text-white w-full text-xl ' value='latest'>
 						<div className='transition-all'>
 							<p className='text-2xl '>Latest</p>
-							{tabSelected !== 'latest' && <span className='block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-white'></span>}
-							{tabSelected === 'latest' && <span className='block w-full transition-all duration-400 h-0.5 bg-white'></span>}
+							{tabSelected !== 'latest' && (
+								<span className='block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-gradient-to-r from-rating-green via-rating-cyan to-rating-purple bg-[length:200%_100%] group-hover:animate-gradient-shift-delayed'></span>
+							)}
+							{tabSelected === 'latest' && (
+								<span className='block w-full transition-all duration-400 h-0.5 bg-gradient-to-r from-rating-green via-rating-cyan to-rating-purple bg-[length:200%_100%] animate-gradient-shift'></span>
+							)}
 						</div>
 					</TabsTrigger>
 					<TabsTrigger className='group data-[state=active]:bg-neutral-800 bg-neutral-950 text-white data-[state=active]:text-white w-full text-xl ' value='essays'>
 						<div className='transition-all'>
 							<p className='text-2xl '>Essays</p>
-							{tabSelected !== 'essays' && <span className='block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-white'></span>}
-							{tabSelected === 'essays' && <span className='block w-full transition-all duration-400 h-0.5 bg-white'></span>}
+							{tabSelected !== 'essays' && (
+								<span className='block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-gradient-to-r from-rating-green via-rating-cyan to-rating-purple bg-[length:200%_100%] group-hover:animate-gradient-shift-delayed'></span>
+							)}
+							{tabSelected === 'essays' && (
+								<span className='block w-full transition-all duration-400 h-0.5 bg-gradient-to-r from-rating-green via-rating-cyan to-rating-purple bg-[length:200%_100%] animate-gradient-shift'></span>
+							)}
 						</div>
 					</TabsTrigger>
 				</TabsList>

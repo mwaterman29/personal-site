@@ -3,7 +3,10 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex flex-col lg:flex-row min-h-full p-2 md:p-6 lg:p-12 xl:p-14">
+    <main className="flex flex-col lg:flex-row min-h-full p-2 md:p-6 lg:p-12 xl:p-14 relative">
+      {/* Gradient decoration */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rating-green via-rating-cyan to-rating-purple opacity-60"></div>
+      
       <div className='flex basis-4/12 mx-4 rounded-md h-1/2 md:h-full'>
         <Carousel
           urls={[
@@ -22,7 +25,10 @@ export default function Home() {
           />
       </div>
       <div className='flex flex-col basis-8/12 gap-4'>      
-        <p className='text-center lg:text-left text-4xl pt-6 md:pt-0 md:pb-2'>Hi, I&#39;m Matt!</p>
+        <div className="relative">
+          <p className='text-center lg:text-left text-4xl pt-6 md:pt-0 md:pb-2'>Hi, I&#39;m Matt!</p>
+          <div className="absolute bottom-0 left-0 w-24 h-0.5 bg-gradient-to-r from-rating-green via-rating-cyan to-rating-purple opacity-80"></div>
+        </div>
 
         <p>I work as a Senior Frontend Engineer for <a target='_blank' href='https://mavenbio.com' className='text-blue-500 hover:text-blue-700 visited:text-purple-600'>Maven Bio</a>, a small BioPharma startup based in Boston. 
         I lead the front-end development, and have brought us from an empty repository to signing contracts with major life science consultancies. 
@@ -47,19 +53,3 @@ export default function Home() {
     </main>
   )
 }
-
-/*
-
-        <p className='text-xl my-4'>I&#39;m a developer with a particular affinity for VR tech, Unity editor scripting, computer science education, and Next.js fullstack webdev.</p>
-        <p>You can read about my projects in all the areas above on the projects section of this site! Regarding my focus areas, I built some interesting stuff. I built
-          avatar creation software in Unity, as well as an online marketplace to buy and sell VR assets. I built a Unity VR app for the Quest to teach students about
-          data structures and algorithms, and ran a study on its effectiveness. I work on an extension for Spotify to allow for weighting songs on playlists. </p>
-        <p className='mt-4'>I graduated from UMass Lowell in three years with a 4.0 GPA. My favorite classes were Databases I and II, Assembly Programming, and Analysis
-        of Algorithms. During my time there, I competed as head of the Model UN team, and won an award (top 3 placement)
-          at every conference we attended. I joined the UML Indoor Rock Climbing Team, and frequently climb both in and outdoors. I am also an Eagle scout.
-        </p>
-        <p  className='mt-4'>Personally, I&#39;m deeply passionate about effective non-profit work. I&#39;m on the board of the Lowell Association for the Blind, and have
-        done a lot of volunteer work for them as well as the Merrimack Valley Food Bank. I hold a personal attachment towards work in the areas of food insecurity,
-        mental health, and accessibility.
-        </p>
-*/

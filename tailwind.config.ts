@@ -25,6 +25,15 @@ const config = {
       colors: {
         'peak': '#ff6f08',
         'favorite': '#8803fc',
+        'rating-red': '#9e150b',
+        'rating-yellow': '#ffeb38',
+        'rating-green': '#008f00',
+        'rating-cyan': '#00ded6',
+        'rating-purple': '#a855f7',
+      },
+      backgroundImage: {
+        'gradient-rating': 'linear-gradient(90deg, #008f00, #00ded6, #a855f7)',
+        'gradient-rating-animated': 'linear-gradient(90deg, #008f00 0%, #00ded6 50%, #a855f7 100%)',
       },
       animation:
       {
@@ -49,6 +58,8 @@ const config = {
         "album-slide-back": "albumSlide 2.5s ease-in-out backwards reverse",
         
         slideOpen: 'slideOpen 0.5s ease-out forwards',
+        'gradient-shift': 'gradientShift 3s ease-in-out infinite',
+        'gradient-shift-delayed': 'gradientShift 3s ease-in-out infinite 500ms',
       },
       keyframes: {
         albumSlide : {
@@ -99,6 +110,17 @@ const config = {
           to: { height: "0" },
         },
         
+        gradientShift: {
+          '0%': { 
+            backgroundPosition: '0% 50%',
+          },
+          '50%': { 
+            backgroundPosition: '100% 50%',
+          },
+          '100%': { 
+            backgroundPosition: '0% 50%',
+          },
+        },
       },
     },
   },

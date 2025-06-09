@@ -50,23 +50,35 @@ export default function ApexBars({ className = '', barCount = 21, baseColor = 21
 	const barsArray = Array.from({ length: barCount });
 	const middleIndex = Math.floor(barCount / 2);
 
-	// Helper function to interpolate between green and cyan
+	// Helper function to interpolate between green, cyan, and purple
 	const getBarColor = (index: number) => {
 		const distanceFromCenter = Math.abs(index - middleIndex);
 		const maxDistance = Math.floor(barCount / 2);
 		
-		// Interpolation factor: 0 at center (cyan), 1 at edges (green)
-		// Apply power function to lean more towards green
+		// Interpolation factor: 0 at center (purple), 1 at edges (green)
 		const rawFactor = maxDistance > 0 ? distanceFromCenter / maxDistance : 0;
-		const factor = Math.pow(rawFactor, 0.8); // Lower power makes it lean more towards green
+		const factor = Math.pow(rawFactor, 0.7); // Adjust curve for better distribution
 		
-		// Colors: green [0, 143, 0] at edges, cyan [0, 222, 214] at center
+		// Colors: green [0, 143, 0] at edges, cyan [0, 222, 214] at mid, purple [168, 85, 247] at center
 		const green = [0, 143, 0];
 		const cyan = [0, 222, 214];
+		const purple = [168, 85, 247];
 		
-		const r = Math.round(cyan[0] + (green[0] - cyan[0]) * factor);
-		const g = Math.round(cyan[1] + (green[1] - cyan[1]) * factor);
-		const b = Math.round(cyan[2] + (green[2] - cyan[2]) * factor);
+		let r, g, b;
+		
+		if (factor > 0.5) {
+			// Interpolate between green and cyan (edges to mid)
+			const localFactor = (factor - 0.5) * 2; // Normalize to 0-1
+			r = Math.round(cyan[0] + (green[0] - cyan[0]) * localFactor);
+			g = Math.round(cyan[1] + (green[1] - cyan[1]) * localFactor);
+			b = Math.round(cyan[2] + (green[2] - cyan[2]) * localFactor);
+		} else {
+			// Interpolate between purple and cyan (center to mid)
+			const localFactor = factor * 2; // Normalize to 0-1
+			r = Math.round(purple[0] + (cyan[0] - purple[0]) * localFactor);
+			g = Math.round(purple[1] + (cyan[1] - purple[1]) * localFactor);
+			b = Math.round(purple[2] + (cyan[2] - purple[2]) * localFactor);
+		}
 		
 		return `rgb(${r}, ${g}, ${b})`;
 	};
@@ -87,7 +99,7 @@ export default function ApexBars({ className = '', barCount = 21, baseColor = 21
 						/>
 					))}
 				</div>
-				<div className='absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-background/90'></div>
+				<div className='absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-black/30'></div>
 			</div>
 		</div>
 	);

@@ -5,7 +5,7 @@ const getRatingColor = (rating: number) => {
       yellow: [255, 235, 56],
       green: [0, 143, 0],
       cyan: [0, 222, 214],
-      cyanStart: [130, 196, 194]
+      purple: [168, 85, 247] // New purple/magenta color for 130+ ratings
     };
   
     let startColor, endColor;
@@ -17,19 +17,27 @@ const getRatingColor = (rating: number) => {
       endColor = colors.yellow;
       fraction = rating / 50;
     } else if (rating < 100) {
-      // 50 - 100 goes from yellow to green
-      startColor = colors.yellow;
-      endColor = colors.green;
-      fraction = (rating - 50) / 50;
+      // 50 - 100 goes from yellow to green to cyan
+      if (rating < 75) {
+        // 50 - 75 goes from yellow to green
+        startColor = colors.yellow;
+        endColor = colors.green;
+        fraction = (rating - 50) / 25;
+      } else {
+        // 75 - 100 goes from green to cyan
+        startColor = colors.green;
+        endColor = colors.cyan;
+        fraction = (rating - 75) / 25;
+      }
     } else if (rating <= 130) {
-      // 100 - 130 goes from green to cyan
-      startColor = colors.cyanStart;
-      endColor = colors.cyan;
+      // 100 - 130 goes from cyan to purple
+      startColor = colors.cyan;
+      endColor = colors.purple;
       fraction = (rating - 100) / 30;
     } else {
-      // Rating above 130 defaults to cyan
-      startColor = colors.cyan;
-      endColor = colors.cyan;
+      // Rating above 130 defaults to purple
+      startColor = colors.purple;
+      endColor = colors.purple;
       fraction = 0;
     }
   
