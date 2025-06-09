@@ -24,7 +24,7 @@ export default function Home() {
       <div className='flex flex-col basis-8/12 gap-4'>      
         <p className='text-center lg:text-left text-4xl pt-6 md:pt-0 md:pb-2'>Hi, I&#39;m Matt!</p>
 
-        <p>I work as a Senior Frontend Engineer for <a target='_blank' href='https://mavenbio.io' className='text-blue-500 hover:text-blue-700 visited:text-purple-600'>Maven Bio</a>, a small BioPharma startup based in Boston. 
+        <p>I work as a Senior Frontend Engineer for <a target='_blank' href='https://mavenbio.com' className='text-blue-500 hover:text-blue-700 visited:text-purple-600'>Maven Bio</a>, a small BioPharma startup based in Boston. 
         I lead the front-end development, and have brought us from an empty repository to signing contracts with major life science consultancies. 
         My specialties there include fully programmatic generation of industry-quality charts and powerpoints, highly efficient filtering of massive enumerative values, and custom datagrids that supplant (and thus obviate the cost of) existing solutions.</p>
 

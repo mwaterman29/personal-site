@@ -33,7 +33,7 @@ export default function Home() {
                 <p className='w-full text-2xl text-center'>Work Experience</p>
                 <div className='flex flex-row justify-between pt-2'>
                     <Link
-                        href="https://www.mavenbio.io/"
+                        href="https://www.mavenbio.com/"
                     >
                         <p><span className='underline'>Maven Bio</span>, Senior Frontend Engineer</p>
                     </Link>
