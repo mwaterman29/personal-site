@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils"
 
-const Logo = ({ className }: { className?: string }) =>
+const Logo = ({ className, innerStrokeWidth, outerStrokeWidth }: { className?: string, innerStrokeWidth?: number, outerStrokeWidth?: number }) =>
 {
 	return (
 		<svg
@@ -9,11 +9,11 @@ const Logo = ({ className }: { className?: string }) =>
 			xmlns='http://www.w3.org/2000/svg'
 			stroke='white'
 			fill='none'
-			stroke-width='10'
+			stroke-width={outerStrokeWidth}
 		>
 			<circle cx='200' cy='200' r='180' />
 			<path
-				stroke-width='10'
+				stroke-width={innerStrokeWidth}
 				d='
 M20,200 
 L40,200
