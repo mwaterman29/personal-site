@@ -91,7 +91,13 @@ async function markdownToComponent(markdown: string, extraRules?: any[])
 			pattern: /!SE\s+playlist\/([\w\d]+)\?si=[\w\d]+\s+(\d+)/g,
 			replacement:
 				'<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/$1?utm_source=generator" width="100%" height="$2" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
-		}
+		},
+		{
+			pattern: /!SE\s+track\/([\w\d]+)(?:\?si=[\w\d]+)?\s+(\d+)/g,
+			replacement:
+				'<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/$1?utm_source=generator" width="50%" height="$2" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
+		},
+
 	];
 
 	// Apply markdown
