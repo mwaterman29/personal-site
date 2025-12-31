@@ -8,10 +8,14 @@ This list is limited to one song per artist, as it makes for a much more engagin
 
 ### 10. kmoe - Carpet
 
+!SE track/5DTqcZlVd7HmXxRAIcWKZo 80
+
 *See also: [Thousand Yard Stare](https://open.spotify.com/track/0kE9Sx06mOikMnb7e6AtXR?si=7190c4f548f24d7e),  [Do I Keep You Up](https://open.spotify.com/track/04qjgWsa6urhAauXYWe3Qi?si=b623dcf7929f470c), [Dumpster Fire](https://open.spotify.com/track/6joVOYeKHWl5g744BuB3dg?si=7fb3307fb24f40c8)*
 
 When I first listened to kmoe's debut album, K1, I didn't really latch onto this song. Though I liked it, I was caught up with the singles - Thousand Yard Stare, Aired out, Do I keep you up - relegating this track to a sinking spot in my library. Then I returned to K1 as a whole, beginning to appreciate the staticky soundstage, shrill, sparsely arranged melody, clearing space for the vocals. When I saw him live, opening for quannnic, my love for this song was solidified. Where the mixing felt spacious on first listen, it felt suffocating live - and that intensity has completely changed how I feel about the song. The slamming low end, searing top synth, and shaky, repeated delivery of the vocals in the midrange "How am I gonna stay on -" fill the space with just a few elements, amplifying this feeling. The song feels almost empty at times - not in a vacuous way; it's impressively hollowing - reinforcing the visceral imagery of feeling directionless: "Can't quit shaking // Let me out" and "Coughing up black shit // Hacking up a lung".  Even the small details: the crackling bass, the vibrato on his voice, with the syncopation of the percussion matching it all enrich the track. This song is inaccessible, abrasive, and honestly a bit weird - but that contributes perfectly to the unique, disorienting feeling that it offers. Listen after listen, the noisy mixing and enveloping static evokes literally being in shock, which is unbelievably compelling. Through all of this, the track is still energetic and danceable: it doesn't sacrifice an enjoyable listening experience in service of intensity or telling a story. With all of these qualities in mind - I have no doubts that Carpet is the best song on K1, and has earned its spot on this list. 
 ### 9. tonser - parasite
+
+!SE track/5msi1LiwES905nHJKl06NN 80
 
 *See also: [txt me](https://open.spotify.com/track/5tjAseVYRYALXgpq3FQmL9?si=3cc315d46f6b4d82), [honor](https://open.spotify.com/track/4aGBqmWri4K1OlBSkFYAFY?si=1e15ab92a79d42d2), [scars](https://open.spotify.com/track/2TbAFb03ayGLlCApXmvlKw?si=b1a112c0ffb1430f)*
 
@@ -19,15 +23,21 @@ When I first listened to kmoe's debut album, K1, I didn't really latch onto this
 
 ### 8. Julia Wolf - You've Lost a Lot of Blood
 
+!SE track/1gog4sb6ouR7t8YuT0eKT1 80
+
 *See also: [In My Room](https://open.spotify.com/track/79IgD1wf3xltQdDK3l5Why?si=f17362a112914342)*
 
 I've thoroughly enjoyed Pressure since it's release, especially the standout singles of Loser, Jennifer's Body, and of course, the viral In My Room. Though that song is amazing - it's clear to me that Julia Wolf is not a one-hit wonder, and this song proves it. You've Lost A Lot of Blood is a wonderful track - beautiful, well-arranged, and a perfect fit for my taste. The compelling lyricism, gentle opening, airy and ethereal vocals, and lush guitar tone all work in seamless harmony to make not only the best song on Pressure, but one of the best songs I've heard all year. The transition from small, downtrodden guitar strums and compressed vocals to an immersive, glowing soundstage works flawlessly, focusing on the pivotal ask: "Is this who I am now?". It's a heart-rending reflection on childhood trauma; I'm particularly compelled by the lyrics "I prayed for death with a stuffed dog on my bed", followed by the barking of dogs over the guitars and echoing vocals. It's continued to grow on me throughout the year, as the song is even more fitting for autumn and winter than the early summer when it released - a fitting companion for cold mornings. Considering the amazing guitar work, gripping lyricism, and my personal love for the vocal style, it's no surprise I've kept returning to this song.
 
 ### 7. Cynthoni - Lvstlove -  Night Drive at 177mph mix
 
+!SE track/5R8c8CFyoFE2Bc8W0H6PEA 80
+
 Although the Cynthoni rebrand has been somewhat controversial, or at very least met with mixed reviews, I'm certainly enjoying it. I honestly feel as if my appetite for good atmospheric DnB is nearly infinite. I am consistently compelled by the digital euphoria that emerges from the rapid percussion, airy risers, and floating melodies. That's true throughout her new body of work, but especially here. This is a thirteen minute continuous mix of Lvstlove, serving as the Newlove equivalent on the Draining Love Story remake. Although Lvstlove is good on it's own, this mix is a significant expansion, and in my opinion, improvement over the original track. Sonically, it's extremely effective. The glowing opening, wispy risers and reversed cymbals, and quintessential digital melody work seamlessly together - exactly what you'd expect from Jvne. The percussion is as rich as ever, punctuating and supporting the melodic elements on top. Despite its length, it doesn't drag on - in fact, I appreciate how this song flows, and it's perfect for entering flow state yourself. Where other songs work well feeling expansive, maximalist, or larger-than-life, this one stays in its lane, building a fluid, immersive soundscape for the listener. More than the sound, I find the overall disposition of the track to suit my taste extremely well. I have, for years, been a fan of late-night, high-speed drives accompanied by good music. Having an amazing track from one of my favorite artists catered directly to this experience really amplifies my enjoyment of this song. This song, being released in January, accompanied my entire year - from focused work to late night returns home - and I still love it just as much as I did on first listen. 
 
 ### 6. lexycat - joplin 
+
+!SE track/3syOQvWsdxTO4WJ9YiygkE 80
 
 *See also [ash ur cigarette](https://open.spotify.com/track/5FZwWUC9zpxkYPQJKi7clN?si=51533c3786014d2d), [luxury](https://open.spotify.com/track/7qRJ5J6lh3HSYgNwKti16K?si=b7ea3c3fa0da43bb), [victim](https://open.spotify.com/track/3Qr8wh35USvFrR4jYQtT4h?si=f8984ea9a1f44080)*
 
@@ -35,23 +45,34 @@ As I wrote when her song 'victim' was my #6 for the year - Lexy has been on an a
 
 ### 5. aftrr! - Headrush
 
+!SE track/1dXUmDGBqskFu2MHtZ1WSN 80
+
 *See also: [Somebody Else](https://open.spotify.com/track/07J990sGojaZxt4nVj5dh8?si=a357dd0626014219), [Requiem](https://open.spotify.com/track/5HQUZSoR9t7avs9MmUrOxB?si=2cedb388370b4cd9)*
 
 Do you ever feel like a song is just designed for you to enjoy it? Though I've felt that for a number of songs (even others on this list) - I don't know if it's ever been as true as it is on this song, Headrush. Since discovering aftrr earlier this year, I've been a huge fan - I adore this flavor of pop-leaning, sample-heavy, ultra-digital electroclash. On Headrush, aftrr! combines what I love about these genres to a truly uncanny degree. The production feels very 2hollis - brash synths, punchy percussion, and a sort of indelible groove that is characteristic of neo-electroclash. The first fifteen seconds would fit right in on 2, and I mean that as a wholehearted compliment. And then, of all vocal samples in the entire world, it's Risk, by Gracie Abrams. I've written at length about my adoration for her vocals, and it is deeply enjoyable for me to hear my favorite vocalist sampled in my favorite genre. Gracie's vocals over electroclash production is a fusion I had resigned myself to never getting, and yet, here it is. I love how the sample is used in this song, alternating between the sample and aftrr's vocals: "Headrush // *God, I'm* // Sun-kissed // *Deep-end*". This back-and-forth, scaffolded by claps and a riser are the perfect structure for an amazing track. And of course, the "aftrr!" tag is as good as ever. Honestly, the only way this song could be *more* fitting of my taste is if it sampled The Bottom, not Risk. All in all a wonderful song, and I truly cannot wait to hear what aftrr! cooks up next. 
 ### 4. Ninajirachi - Delete
 
+!SE track/0CVbCtcdXAIw00YBXXbneu 80
+
 On my review of this album earlier this year, I called this song "flawless from end-to-end", citing the punchy leads, radiant arpeggiated melody, and absolutely colossal drop, all coming together to make my favorite song on that album. In retrospect, flawless somehow feels like an understatement. From the in-touch lyrics, to the instrumental composition, to the arrangement and mixing, every detail just works perfectly together. And still, it is greater than the sum of its parts. When I go to write my essay on instrumental elements that feel 'astral', this is what I'll reach for as the prototypical example. The rumbling, searing bass that scaffolds the ultra-bright, radiant, swirling arpeggiated synth is the perfect example of this feeling: the elements are like the ground beneath you as you look at the stars shining above you, and its a sound signature that I just adore. The whole album makes good use of this V-shaped sound, with clear attention to detail on the resolution and imaging of the both the top and bottom end of the sound, which does not go unnoticed. Even if this song doesn't age well - we tire of EDM, the lyrics become out of touch, the instrumental is considered overdone - for now, it is perfect. I cannot imagine a better dissection of the "modern mega-digital meta mating ritual" than this.
 
 ### 3. Clara Kimera - Angel Candles
 
+!SE track/7cl1kr7pqaXdDov0lf6cQq 80
+
 Often, my picks for the top songs of the year are not among my most listened. Where the top songs list favors songs that feel viscerally engaging, colossal in form or function, or emotionally gripping, my wrapped features songs scored only by their replayability. angel candles somehow fits on both lists, appearing at the #2 and #3 spot respectively. It is immensely impressive to strike this balance - maintaining easy listening while holding up to close listening. As I wrote on the wrapped review, this track is haunting and ethereal, rarely qualities ascribed to a song you'd listen to on loop for hours. I'm obsessed with the rapid, bleeping triplet of the melody under the eponymous "angel candles", and the way the instrumental bends, accelerates, and pulses to fit the vocals is amazing. This keeps the listener focused on the synergy between the elements of the song, and perfectly balances the atmospheric elements with easy listening. Even after literally three hundred repeats, I'm still coming to appreciate new details, most recently in the bridge before the final chorus. The way the drums drop out as she says "I'll do it again", serve as the perfect drop into the chorus, and the function of 'do it again' not only contributes to the narrative, but also structurally to the repetition of the chorus. I adore this song, and it is a privilege, rather than a burden, to write about it twice across these two lists. 
+
 ### 2. Jane Remover - Experimental Skin
+
+!SE track/5pt8I0fp9O0nhdIs3GgEBo 80
 
 *See also: [Dancing with your eyes closed](https://open.spotify.com/track/1QkeomwCeKgXOEWoMHzrXr?si=419630a2489e463f), [angels in camo](https://open.spotify.com/track/7a4dV5aM4pHsTdOkqIVK8l?si=1dc7616fe1684338), and honestly the rest of Revengeseekerz. If this was purely by score, Jane would have at least three songs on this list.*
 
 Throughout this list, I've praised songs for being dynamic, explosive, and energetic. There is no song that fits those qualities better than this one. Experimental Skin is the best song on Jane Remover's latest album - [Revengeseekerz](https://www.mwaterman.dev/music/Jane%20Remover%20-%20Revengeseekerz.md), and I think it's the most energizing song I have ever heard. From hyperpop, to noise rock, to the unbelievable rage fusion album to which this song belongs, Jane's winstreak never ends. She says it herself - "Bitches don't know what to call it // I'm like 3 and 0" - and I think that's proven by the nearly incomprehensible density of this track. Once the introductory noise pulls back, leaving space in the mix for the layers to separate, the composition and arrangement become truly transcendent. She blends deep sub-bass, heavy guitar strums at the low-end, her vocals at the mids, and my ever-beloved arpeggiated digital synth to accompany the high-hats at the top of the range. Though a mix this packed seems like it would be nearly unlistenable, Jane has instead delivered an impossibly engaging track. The energy that radiates from this song is immense - "I'm a shapeshifter // I'm a new kind of bitch: off-kilter", delivered over vocal chops and percussion that stutters like a machine gun. As the final chorus builds - "I think that I've been falling for you // You don't even know what you do to me" - this song peaks higher than almost any other. It is eponymously explosive: the repeated, chopped "I wanna sin, blow the city up" over the four-on-the-floor drop that caps off the best section of music I've heard all year. Through drawing on all her past work - pop danceability, dariacore sample work, gazey guitars - Jane has delivered a masterpiece. And I don't think she's stopping at 3 and 0. 
 
 ### 1. By Storm - Double Trio 2
+
+!SE track/2QVsHwPwciFkNt7odhQt1W 80
 
 *See also: [In My Town](https://open.spotify.com/track/02d0eSjcUsP9Lcubb7QUHJ?si=1828881726e940a0)*
 
