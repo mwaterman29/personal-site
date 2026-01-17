@@ -100,7 +100,7 @@ export default async function PostPage({ params }: { params: { name: string } })
 
 		return (
 			<div className='flex flex-col w-full items-center justify-center px-2 xl:p-0'>
-				<div className='flex flex-col max-w-[1200px]'>
+				<div className='flex flex-col max-w-[1000px]'>
 					<div className='flex flex-col items-center md:flex-row pt-4'>
 						<div className='flex items-center justify-center w-full max-w-[300px] aspect-square pt-4'>
 							<AlbumCover link={album.imageLink} badges={getBadges(album)} type={'Album'} />
