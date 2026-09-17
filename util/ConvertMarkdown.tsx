@@ -7,7 +7,14 @@ import { unified } from 'unified';
 import { rehype } from 'rehype';
 import rehypeHighlight from 'rehype-highlight';
 
-async function markdownToComponent(markdown: string, extraRules?: any[])
+// A replacement may be a function so a rule can vary per match (e.g. only anchoring
+// the first mention of a song) without `$&`-style escaping getting in the way.
+type ExtraRule = {
+	pattern: RegExp;
+	replacement: string | ((match: string, ...args: any[]) => string);
+};
+
+async function markdownToComponent(markdown: string, extraRules?: ExtraRule[])
 {
 	const file = await unified()
 		.use(remarkParse)
@@ -111,8 +118,7 @@ async function markdownToComponent(markdown: string, extraRules?: any[])
 	{
 		extraRules.forEach(rule =>
 		{
-			console.log(rule);
-			result = result.replace(rule.pattern, rule.replacement);
+			result = result.replace(rule.pattern, rule.replacement as any);
 		});
 	}
 

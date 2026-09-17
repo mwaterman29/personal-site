@@ -11,3 +11,20 @@ svg:not(.svg-exclude-fill)
 {
 fill: currentColor
 }
+
+/* Deeplink target highlight - see components/Music/DeeplinkScroller.tsx */
+@keyframes deeplinkFlash {
+  0% {
+    background-color: rgba(168, 85, 247, 0.5);
+  }
+  100% {
+    background-color: rgba(168, 85, 247, 0);
+  }
+}
+
+.deeplink-flash {
+  animation: deeplinkFlash 2.5s ease-out forwards;
+  border-radius: 0.25rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

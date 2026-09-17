@@ -132,10 +132,10 @@ function getSongLink(song: SongWithArtist): string
 		// If it's a single with its own review
 		return `/music/${song.reviewFile}`;
 	}
-	else if (song.albumId)
+	else if (song.album?.reviewFile)
 	{
 		// If it's part of an album, link to the album with a deeplink
-		return `/music/${song.album?.reviewFile}?deeplink=${encodeURIComponent(song.title)}`;
+		return `/music/${song.album.reviewFile}?deeplink=${encodeURIComponent(song.title)}`;
 	}
 	return '#';
 }

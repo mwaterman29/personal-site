@@ -13,9 +13,19 @@ import getBadges from '@/util/music/getBadges';
 import { SingleWithArtist } from '../types';
 import isFavorite from '@/util/music/isFavorite';
 import Favorite from '@material-symbols/svg-400/outlined/favorite-fill.svg';
+import DeeplinkScroller from '@/components/Music/DeeplinkScroller';
+import { proseAnchorId, trackAnchorId } from '@/util/music/songAnchor';
 
-export default async function PostPage({ params }: { params: { name: string } })
+export default async function PostPage({
+	params,
+	searchParams
+}: {
+	params: { name: string };
+	searchParams: { deeplink?: string | string[] };
+})
 {
+	const deeplink = Array.isArray(searchParams.deeplink) ? searchParams.deeplink[0] : searchParams.deeplink;
+
 	const directoryPath = path.join(process.cwd(), 'content', 'reviews');
 	const filenames = readdirSync(directoryPath);
 
@@ -61,7 +71,7 @@ export default async function PostPage({ params }: { params: { name: string } })
 				let result = title;
                 
                 //Escape HTML entities
-				result = result.replace('&', '&#x26;');
+				result = result.replace(/&/g, '&#x26;');
 
                 // Escape regex special characters
                 result = result.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -70,9 +80,24 @@ export default async function PostPage({ params }: { params: { name: string } })
 
 			const fixedTitle = fixTitle(song.title);
 
+			// Only the first mention gets the deeplink anchor - a song written about more
+			// than once would otherwise emit duplicate ids.
+			let anchored = false;
+
 			return {
 				pattern: new RegExp(`${fixedTitle} !SM`, 'gi'),
-				replacement: `${song.title} <span style="color: ${getRatingColor(song.rating)}">(${song.rating})</span>`
+				replacement: () =>
+				{
+					const body = `${song.title} <span style="color: ${getRatingColor(song.rating)}">(${song.rating})</span>`;
+
+					if (anchored)
+					{
+						return body;
+					}
+
+					anchored = true;
+					return `<span id="${proseAnchorId(song.title)}">${body}</span>`;
+				}
 			};
 		});
 	}
@@ -100,6 +125,7 @@ export default async function PostPage({ params }: { params: { name: string } })
 
 		return (
 			<div className='flex flex-col w-full items-center justify-center px-2 xl:p-0'>
+				<DeeplinkScroller title={deeplink} />
 				<div className='flex flex-col max-w-[1000px]'>
 					<div className='flex flex-col items-center md:flex-row pt-4'>
 						<div className='flex items-center justify-center w-full max-w-[300px] aspect-square pt-4'>
@@ -140,7 +166,7 @@ export default async function PostPage({ params }: { params: { name: string } })
 							const isFavoriteSong = isFavorite(song, album.artist.name);
 
 							return (
-								<div key={song.id} className='flex flex-row items-center gap-2'>
+								<div key={song.id} id={trackAnchorId(song.title)} className='flex flex-row items-center gap-2 w-fit'>
 									<div className=''>
 										{song.title}
 										&nbsp;-&nbsp;
