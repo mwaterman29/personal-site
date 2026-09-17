@@ -23,7 +23,7 @@ Track Ratings:
 Hit The Wall - 65
 Death Wish - 50
 The Knife - 50
-Daugher From Hell - 45
+Daughter From Hell - 45
 Look at my Life - 70
 Good Reason - 95
 Men Like You - 30
@@ -34,5 +34,5 @@ Minibar - 25
 Imaginary Friend - 65
 Afflictions - 75
 Humming - 90
-What If It's Right - 40
+What If It's Right? - 40
 Cold Goodbyes - 35
