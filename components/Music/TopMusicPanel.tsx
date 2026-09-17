@@ -19,11 +19,15 @@ interface TopMusicPanelProps
 
 const TopMusicPanel = ({ albums, songs, singles }: TopMusicPanelProps) =>
 {
-	const [shelfMode, setShelfMode] = useState(true);
 	const [isMobile, setIsMobile] = useState(false);
 
 	const router = useRouter();
 	const searchParams = useSearchParams();
+	const shelfFromUrl = searchParams.get('shelf');
+
+	// What the user asked for. Mobile renders cards regardless, so the two are kept
+	// separate rather than forcing this back to false and losing the preference.
+	const [shelfPreference, setShelfPreference] = useState(() => shelfFromUrl === null || shelfFromUrl === 'true');
 
 	// Check if screen is mobile size
 	useEffect(() =>
@@ -43,35 +47,31 @@ const TopMusicPanel = ({ albums, songs, singles }: TopMusicPanelProps) =>
 		return () => window.removeEventListener('resize', checkScreenSize);
 	}, []);
 
-	// Set shelf mode based on screen size
+	// Follow the URL when it changes underneath us (back/forward). The URL is only ever
+	// *written* from selectShelfMode - writing it from an effect is what used to clobber
+	// the incoming ?shelf= on first load, and pile up history entries doing it.
 	useEffect(() =>
 	{
-		if (isMobile)
+		if (shelfFromUrl !== null)
 		{
-			setShelfMode(false); // Force card mode on mobile
+			setShelfPreference(shelfFromUrl === 'true');
 		}
-	}, [isMobile]);
+	}, [shelfFromUrl]);
 
-	useEffect(() =>
+	const shelfMode = shelfPreference && !isMobile;
+
+	const selectShelfMode = (value: boolean) =>
 	{
-		// Set the initial shelf mode based on the URL query parameter
-		const shelf = searchParams.get('shelf');
-		if (shelf !== null && !isMobile)
-		{
-			setShelfMode(shelf === 'true');
-		}
-	}, [searchParams, isMobile]);
+		setShelfPreference(value);
 
-	useEffect(() =>
-	{
-		// Construct the query parameters
-		const params = new URLSearchParams();
-		params.set('tab', 'top'); // Always set tab to 'top'
-		params.set('shelf', String(shelfMode));
+		// Copy the existing params rather than rebuilding them, so ?tab= (owned by the
+		// parent) and anything else on the URL survives the toggle.
+		const params = new URLSearchParams(searchParams.toString());
+		params.set('shelf', String(value));
 
-		// Update the URL query parameters
-		router.push(`?${params.toString()}`);
-	}, [shelfMode, router]);
+		// replace, not push - the layout toggle is a view preference, not a place in history.
+		router.replace(`?${params.toString()}`, { scroll: false });
+	};
 
 	return (
 		<div className='flex flex-col w-full gap-8'>
@@ -107,7 +107,7 @@ const TopMusicPanel = ({ albums, songs, singles }: TopMusicPanelProps) =>
 					{!isMobile && (
 						<div className='flex flex-row items-center gap-x-2'>
 							<p className={shelfMode ? '' : 'font-bold'}>Card Mode</p>
-							<Switch checked={shelfMode} onCheckedChange={setShelfMode} />
+							<Switch checked={shelfMode} onCheckedChange={selectShelfMode} />
 							<p className={shelfMode ? 'font-bold' : ''}>Shelf Mode</p>
 						</div>
 					)}
@@ -117,7 +117,7 @@ const TopMusicPanel = ({ albums, songs, singles }: TopMusicPanelProps) =>
 						.sort((a, b) => b.rating - a.rating)
 						.map((album, index) =>
 						{
-							if (shelfMode && !isMobile)
+							if (shelfMode)
 							{
 								return <ShelfReviewCard review={album} key={index} />;
 							}
